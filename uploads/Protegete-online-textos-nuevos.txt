@@ -1,0 +1,104 @@
+﻿Textos nuevos para Protégete online
+Tres apartados nuevos y ampliación del glosario, listos para pegar en la web.
+05 · Si te quitan el móvil: que no se lleven también tu vida
+Paso 1 · Antes: cierra bien la puerta
+* Pon un PIN de 6 cifras o más.
+* Activa la huella o la cara.
+* Activa el bloqueo automático (30 segundos o 1 minuto).
+* Oculta las notificaciones con la pantalla bloqueada.
+* Tapa la pantalla al teclear el PIN.
+Paso 2 · Antes: activa el localizador y el antirrobo
+En Android
+1. Activa «Encontrar mi dispositivo».
+2. Ve a Ajustes → Google → Todos los servicios → Protección antirrobo.
+3. Activa Bloqueo por detección de robo, Bloqueo sin conexión y Bloqueo remoto.
+En iPhone
+1. Ve a Ajustes → tu nombre → Buscar y activa «Buscar mi iPhone».
+2. Ve a Ajustes → Face ID y código y activa Protección de dispositivo robado.
+Paso 3 · Antes: apunta estos datos
+* IMEI: marca *#06# y anótalo fuera del móvil.
+* SIM: ponle PIN y guarda el PUK.
+* Teléfonos de tu banco y de tu operador.
+* Copia de seguridad de fotos y chats.
+Paso 4 · Hábitos
+* No dejes el móvil en mesas ni en barras.
+* No lo lleves en el bolsillo trasero.
+* No camines mirando la pantalla.
+* Si te lo quitan con violencia, no te enfrentes ni lo persigas.
+Paso 5 · Si te lo quitan: la primera hora
+1. Si hay peligro, llama al 112.
+2. Bloquéalo desde «Encontrar mi dispositivo» (Android) o «Buscar» (iPhone). Si no lo recuperas, bórralo.
+3. Operador: que bloqueen la SIM y, con la denuncia, el IMEI.
+4. Banco: bloquea tarjetas, banca móvil y Bizum.
+5. Contraseñas: cámbialas desde otro aparato (correo, Google, Apple).
+6. SIM nueva con tu número y reactiva WhatsApp.
+7. Denuncia en la Policía Nacional o la Guardia Civil, con DNI y la caja o factura donde salga el IMEI.
+Ojo: no vayas a buscarlo tú; avisa a la policía.
+Ojo: no pulses enlaces de mensajes que dicen «hemos encontrado tu móvil».
+Segunda mano: pide factura y comprueba el IMEI.
+06 · Ciberludopatía: cuando el juego deja de ser juego
+Paso 1 · Qué puedes hacer tú
+1. Activa los límites de depósito, las pausas y el historial en tu cuenta de juego.
+2. Autoprohíbete en el Registro General de Interdicciones de Acceso al Juego (DGOJ): en su sede electrónica con Cl@ve o certificado, en la app oficial o en un registro público.
+3. Borra las tarjetas guardadas, desinstala las apps y bloquea las webs de apuestas (control parental, BetBlocker o Gamban).
+4. Pregunta a tu banco si puede limitar esos pagos.
+5. Cuéntaselo a alguien y llama a FEJAR: 900 200 225.
+6. No pagues una deuda con más juego.
+Ojo: la autoprohibición solo vale para casas con licencia española. No entres en webs sin licencia.
+Si no ves salida: llama al 024. Si hay peligro inmediato, al 112.
+Paso 2 · Si es un hijo o una hija
+* Habla sin gritos.
+* Revisa los movimientos del banco y no dejes tarjetas a su alcance.
+* Activa el control parental.
+* Pide consejo al 017 (INCIBE) o a ANAR: 900 20 20 10.
+07 · Redes sociales: úsalas tú, que no te usen ellas
+Regla del cartel: antes de publicar, pregúntate si lo pondrías en un cartel en la puerta de tu portal. Si no, no lo publiques.
+Paso 1 · Cierra la puerta de tu cuenta
+* Contraseña larga y distinta en cada red, y verificación en dos pasos.
+* Pon la cuenta privada y revisa quién puede escribirte y etiquetarte.
+* Acepta solo a quien conoces.
+* Cierra las sesiones que no reconozcas.
+* Quita de tu perfil el teléfono, el correo y el colegio o trabajo.
+Paso 2 · Qué cuidar antes de publicar
+* Publica cuando ya te hayas ido del sitio, no con la ubicación en tiempo real.
+* Tapa la fachada de tu casa, las matrículas y los uniformes.
+* Tapa los códigos de entradas, billetes y tarjetas.
+* Pide permiso antes de subir fotos de menores.
+Ojo: lo que subes se queda. Búscate en internet y, si algo tuyo no debe estar, pídeselo a la web y, si no te hacen caso, a la AEPD.
+Paso 3 · Tu tiempo
+* Pon un límite de tiempo: Bienestar digital (Android) o Tiempo de uso (iPhone).
+* Apaga las notificaciones que no necesites.
+* Deja el móvil fuera del dormitorio por la noche.
+* Antes de abrir una red, pregúntate para qué.
+Paso 4 · Antes de creerte o compartir algo
+* Mira quién lo dice, la fecha y si otra fuente lo cuenta igual.
+* Desconfía de famosos que recomiendan inversiones o premios.
+* No hagas retos que te pidan hacerte daño, y avisa a un adulto.
+Paso 5 · Personas: respeto y ciberacoso
+* Si no lo dirías a la cara, no lo escribas.
+* No reenvíes fotos ni vídeos íntimos de nadie.
+* Si te amenazan con publicar una foto tuya: no pagues ni respondas, guarda capturas, bloquea y denuncia.
+* Si alguien que no conoces te pide secretos o fotos: no sigas y cuéntaselo a un adulto.
+* Si sufres acoso: guarda capturas, no respondas, bloquea y denuncia en la red. Si hay amenazas, acude a la Policía Nacional o a la Guardia Civil.
+Ayuda: 017 (INCIBE) · 900 20 20 10 (ANAR) · canal prioritario de la AEPD.
+Paso 6 · Si eres madre, padre o docente
+* Habla antes de prohibir.
+* Pactad horarios y activad el control parental.
+* Acompaña, no espíes, y da ejemplo.
+Ampliación del glosario
+* IMEI: número de 15 cifras que identifica tu móvil.
+* PIN de la SIM: código que protege tu tarjeta. PUK: el que la desbloquea.
+* Bloqueo remoto: bloquear tu móvil desde otro aparato.
+* Hurto: quitar algo sin violencia. Robo: quitarlo con fuerza o violencia.
+* Ludopatía: no poder parar de apostar. Ciberludopatía: la que ocurre por internet.
+* Autoprohibición: pedir que te impidan jugar en las casas con licencia.
+* DGOJ: organismo que controla el juego en España.
+* Cajas botín: premios al azar en un videojuego, a cambio de dinero real.
+* Bono de bienvenida: regalo de una casa de apuestas para que juegues más.
+* Scroll infinito: pantalla que nunca se acaba.
+* Huella digital: lo que se sabe de ti por lo que publicas o buscas.
+* Bulo: noticia falsa que parece verdadera.
+* Ciberacoso: acosar a alguien por internet.
+* Sextorsión: amenazar con publicar fotos íntimas para sacar dinero.
+* Grooming: un adulto engaña a un menor para ganarse su confianza.
+Protégete online ·

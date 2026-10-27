@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Protégete online – El ordenador (vídeo interactivo)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@500;700;800&family=Newsreader:ital,opsz,wght@0,6..72,400;1,6..72,400&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f3eee5;--card:#e6e3da;--ink:#1f2933;--ink-soft:#4a5560;--green:#2d5b45;--on-green:#f3eee5;--grid:rgba(31,41,51,.06);
+--fd:"Schibsted Grotesk","Helvetica Neue",Arial,sans-serif;--fb:"Newsreader",Georgia,serif;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#161d22;--card:#1f282e;--ink:#f3eee5;--ink-soft:#b9c0c6;--green:#6fb28f;--on-green:#12201a;--grid:rgba(243,238,229,.06)}}
+:root[data-theme="dark"]{--bg:#161d22;--card:#1f282e;--ink:#f3eee5;--ink-soft:#b9c0c6;--green:#6fb28f;--on-green:#12201a;--grid:rgba(243,238,229,.06)}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg) linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);background-size:72px 72px;color:var(--ink);font-family:var(--fb);font-size:1.15rem;min-height:100vh}
+.wrap{max-width:1100px;margin:0 auto;padding:1.2rem}
+h1{font:800 1.4rem var(--fd);letter-spacing:-.02em;margin:0 0 .8rem}
+.stage{position:relative;container-type:inline-size;aspect-ratio:16/9;background:var(--bg);border:2px solid var(--ink);border-radius:4px;display:grid;grid-template-columns:1fr 1.3fr;align-items:center;gap:2.5cqw;padding:3cqw 4cqw;overflow:hidden}
+.paso{font:700 2cqw var(--fd);color:var(--ink-soft);margin:0 0 .6cqw}
+h2{font:800 3.7cqw/1.07 var(--fd);letter-spacing:-.03em;margin:0 0 1.8cqw}
+.cap{font-size:2.5cqw;line-height:1.35;margin:0 0 1.8cqw;min-height:10.5cqw}
+.cap.off{visibility:hidden}
+.estado{font:700 1.8cqw/1.3 var(--fd);margin:0}
+.mon{width:100%;height:auto;max-height:50cqw;justify-self:center}
+.ln{fill:none;stroke:var(--ink);stroke-width:3;stroke-linecap:round;stroke-linejoin:round}
+.gr{stroke:var(--green)}
+.t{font-family:var(--fd);font-weight:700;fill:var(--ink-soft)}
+.over{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:color-mix(in srgb,var(--bg) 78%,transparent)}
+.over[hidden]{display:none}
+.btn{font:700 1.05rem var(--fd);background:var(--green);color:var(--on-green);border:2px solid var(--green);border-radius:4px;padding:.8rem 1.3rem;cursor:pointer}
+.btn.out{background:transparent;color:var(--ink);border-color:var(--ink)}
+.btn.out[aria-pressed="true"]{background:var(--ink);color:var(--bg)}
+.btn:hover{filter:brightness(1.12)}
+.btn.big{font-size:1.5rem;padding:1.1rem 2rem}
+.btn:focus-visible,.track:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
+.bar{display:flex;flex-wrap:wrap;gap:.6rem;align-items:center;margin-top:1rem}
+.time{font:700 1rem var(--fd);color:var(--ink-soft);min-width:5.5ch}
+.track{position:relative;flex:1 1 220px;height:18px;border:2px solid var(--ink);border-radius:4px;cursor:pointer;background:var(--bg)}
+.fill{position:absolute;inset:0 auto 0 0;width:0;background:var(--green)}
+.mk{position:absolute;top:-2px;bottom:-2px;width:2px;background:var(--ink)}
+.chips{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:.8rem}
+@media (max-width:700px){
+ .stage{aspect-ratio:auto;grid-template-columns:1fr;padding:1.2rem;gap:1rem}
+ .paso{font-size:1rem}h2{font-size:1.7rem;margin-bottom:.8rem}.cap{font-size:1.25rem;min-height:5.5rem}.estado{font-size:1rem}
+ .mon{max-height:none}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<h1>Protégete online · 02 El ordenador · 30 segundos</h1>
+
+<div class="stage">
+ <div>
+  <p class="paso" id="paso"></p>
+  <h2 id="tit"></h2>
+  <p class="cap" id="cap" aria-live="polite"></p>
+  <p class="estado" id="est"></p>
+ </div>
+ <svg class="mon" viewBox="0 0 400 310" role="img" aria-label="Dibujo de un ordenador que muestra la animación">
+  <defs>
+   <clipPath id="clip"><rect x="26" y="68" width="348" height="170"/></clipPath>
+  </defs>
+  <rect class="ln" x="8" y="8" width="384" height="250" rx="10" style="stroke-width:3.5"/>
+  <path class="ln" d="M175 258l-10 38h70l-10-38M130 300h140" style="stroke-width:3.5"/>
+  <g id="g1"></g><g id="g2"></g><g id="g3"></g><g id="g4"></g>
+ </svg>
+ <div class="over" id="over"><button class="btn big" id="bigplay">▶ Ver vídeo (30 s)</button></div>
+</div>
+
+<div class="bar">
+ <button class="btn" id="play">Reproducir</button>
+ <button class="btn out" id="reset">Reiniciar</button>
+ <span class="time" id="time">0:00 / 0:30</span>
+ <div class="track" id="track" role="slider" tabindex="0" aria-label="Posición del vídeo" aria-valuemin="0" aria-valuemax="30" aria-valuenow="0">
+  <div class="fill" id="fill"></div>
+  <div class="mk" style="left:25%"></div><div class="mk" style="left:50%"></div><div class="mk" style="left:75%"></div>
+ </div>
+</div>
+<div class="chips">
+ <button class="btn out" data-go="0">Paso 1 · Del móvil al PC</button>
+ <button class="btn out" data-go="7.5">Paso 2 · Navegador</button>
+ <button class="btn out" data-go="15">Paso 3 · uBlock</button>
+ <button class="btn out" data-go="22.5">Paso 4 · Costumbres</button>
+ <button class="btn out" id="subs" aria-pressed="true">Subtítulos</button>
+ <button class="btn out" id="voz" aria-pressed="false">Narración</button>
+</div>
+</div>
+
+<script>
+const D=30,SC=7.5,$=s=>document.querySelector(s);
+const clamp=(x,a=0,b=1)=>Math.min(b,Math.max(a,x)),ease=x=>x*x*(3-2*x);
+const NS='http://www.w3.org/2000/svg';
+function E(tag,a={},p){const e=document.createElementNS(NS,tag);for(const k in a)e.setAttribute(k,a[k]);if(p)p.appendChild(e);return e}
+function TX(p,x,y,s,size,o={}){const e=E('text',Object.assign({x,y,'font-size':size,class:'t'},o),p);e.textContent=s;return e}
+
+const TIT=['Todo lo del móvil también se aplica aquí','El navegador: tu puerta de entrada','Si te quedas con tu navegador: uBlock Origin','Tres costumbres propias del PC'];
+const BEATS=[
+ [0,'Casi todo lo que aprendiste con el móvil sirve también en el ordenador.'],
+ [3.5,'Antivirus, DNS anti-anuncios y VPN, con las mismas cautelas.'],
+ [7.5,'El navegador es tu puerta de entrada: elige una con buena cerradura.'],
+ [11,'Brave para cada día. Tor para cuando la privacidad importa de verdad.'],
+ [15,'Si sigues con Chrome, Firefox o Edge, instala la extensión uBlock Origin.'],
+ [18.5,'Mira cómo la web se limpia. Instálala solo desde la tienda oficial.'],
+ [22.5,'Actualiza siempre: así se tapan los agujeros que usan los ataques.'],
+ [24.8,'Usa una cuenta normal a diario, no la de administrador.'],
+ [27.2,'Haz copias de seguridad y desconecta el disco al terminar.']
+];
+const g1=$('#g1'),g2=$('#g2'),g3=$('#g3'),g4=$('#g4'),G=[g1,g2,g3,g4];
+
+function frame(g,url){
+ E('rect',{x:24,y:22,width:352,height:218,rx:6,class:'ln',style:'stroke-width:2.5'},g);
+ E('line',{x1:24,y1:66,x2:376,y2:66,class:'ln',style:'stroke-width:2'},g);
+ [38,48,58].forEach(x=>E('circle',{cx:x,cy:44,r:3.5,class:'ln',style:'stroke-width:2'},g));
+ E('rect',{x:74,y:34,width:240,height:20,rx:10,class:'ln',style:'stroke-width:2'},g);
+ TX(g,86,48,url,9,{style:'font-weight:500'});
+}
+
+/* ---- Escena 1: del móvil al ordenador ---- */
+E('rect',{x:32,y:60,width:70,height:130,rx:10,class:'ln'},g1);
+E('line',{x1:55,y1:70,x2:79,y2:70,class:'ln',style:'stroke-width:2.5'},g1);
+const sm=E('path',{d:'M67 108l-17 7v13c0 12 8 19 17 24 9-5 17-12 17-24v-13Z',class:'ln gr',style:'stroke-width:3'},g1);
+TX(g1,67,50,'Móvil',13);
+E('rect',{x:272,y:32,width:96,height:60,rx:5,class:'ln'},g1);
+E('path',{d:'M308 92l-3 10h22l-3-10M298 102h42',class:'ln',style:'stroke-width:2.5'},g1);
+TX(g1,320,124,'Ordenador',13);
+const pills=['Antivirus','DNS','VPN'].map((n,i)=>{
+ const g=E('g',{},g1),r=E('rect',{x:-52,y:-14,width:104,height:28,rx:14,fill:'var(--bg)',class:'ln',style:'stroke-width:2.5'},g);
+ const t=TX(g,0,5,n,14,{'text-anchor':'middle',style:'fill:var(--ink)'});
+ return{g,r,t,n,y:150+i*36}});
+
+/* ---- Escena 2: Brave frente a Tor ---- */
+frame(g2,'www.ejemplo.es');
+E('line',{x1:200,y1:76,x2:200,y2:230,class:'ln',style:'stroke-width:1.5;stroke-dasharray:3 6;stroke:var(--ink-soft)'},g2);
+const L=E('g',{},g2),R=E('g',{},g2);
+TX(L,115,92,'Brave',18,{'text-anchor':'middle',style:'fill:var(--ink)'});
+const adL=E('g',{},L);
+E('rect',{x:48,y:104,width:134,height:40,rx:4,class:'ln',style:'stroke-width:2;stroke-dasharray:5 4'},adL);
+TX(adL,115,129,'¡ANUNCIO!',13,{'text-anchor':'middle'});
+const shL=E('g',{transform:'translate(115 124)'},L);
+E('path',{d:'M0-20l-18 8v13c0 12 9 18 18 23 9-5 18-11 18-23v-13Z',fill:'var(--bg)',class:'ln gr',style:'stroke-width:3'},shL);
+E('path',{d:'M-7 2l5 5 9-11',class:'ln gr'},shL);
+[0,1,2].forEach(i=>E('rect',{x:48,y:162+i*13,width:[134,110,80][i],height:6,rx:3,fill:'var(--ink-soft)',opacity:.55},L));
+TX(L,115,224,'Para cada día',12,{'text-anchor':'middle'});
+TX(R,285,92,'Tor Browser',18,{'text-anchor':'middle',style:'fill:var(--ink)'});
+const P=[[228,160],[262,196],[300,142],[336,190],[356,122]];
+E('polyline',{points:P.map(p=>p.join(',')).join(' '),class:'ln',style:'stroke-width:2;stroke-dasharray:3 6;stroke:var(--ink-soft)'},R);
+P.forEach((p,i)=>E('circle',{cx:p[0],cy:p[1],r:i===0||i===4?8:7,class:'ln',fill:i===0?'var(--ink)':'var(--bg)',style:'stroke-width:2.5'},R));
+const dot=E('circle',{r:5,fill:'var(--green)'},R);
+TX(R,285,224,'Cuando importa de verdad',12,{'text-anchor':'middle'});
+
+/* ---- Escena 3: uBlock Origin ---- */
+frame(g3,'www.noticias-de-ejemplo.es/receta-de-tortilla');
+const ub=E('rect',{x:326,y:32,width:34,height:24,rx:4,class:'ln',style:'stroke-width:2.5'},g3);
+const ubT=TX(g3,343,48,'uB',12,{'text-anchor':'middle'});
+const cg=E('g',{'clip-path':'url(#clip)'},g3);
+const it3=[{k:'t'},{k:'a',s:'¡ANUNCIO QUE OCUPA MEDIA PANTALLA!',u:'Y que tarde en cerrarse',b:3.8},{k:'p',f:[1,.85]},{k:'a',s:'¡APÚNTATE AHORA!',u:'Otro cartel que salta al leer',b:4.6},{k:'p',f:[1,.7]}];
+it3.forEach(it=>{const g=it.g=E('g',{},cg);
+ if(it.k==='t'){it.h=22;TX(g,44,10,'La tortilla perfecta, paso a paso',13,{style:'fill:var(--ink)'})}
+ if(it.k==='p'){it.h=32;it.f.forEach((f,i)=>E('rect',{x:44,y:i*12,width:312*f,height:6,rx:3,fill:'var(--ink-soft)',opacity:.55},g))}
+ if(it.k==='a'){it.h=48;E('rect',{x:44,y:0,width:312,height:40,rx:4,fill:'var(--card)',class:'ln',style:'stroke-width:2;stroke-dasharray:5 4'},g);TX(g,200,18,it.s,11,{'text-anchor':'middle',style:'fill:var(--ink)'});TX(g,200,31,it.u,9,{'text-anchor':'middle',style:'font-weight:500'})}
+});
+
+/* ---- Escena 4: tres costumbres ---- */
+const ICON=['M-12-3a12 12 0 0 1 21-7M12 3a12 12 0 0 1-21 7M10-17v7h-7M-10 17v-7h7','M-11 14a11 8 0 0 1 22 0M0-12m-6 0a6 6 0 1 0 12 0a6 6 0 1 0-12 0','M-15-6h30v16h-30ZM6 2h1M-9-12v-6M-13-14l4-4 4 4'];
+const CARDS=[['Actualizaciones al día','Déjalas en automático.'],['Cuenta normal a diario','Administrador, solo si hace falta.'],['Copias de seguridad','Disco externo o nube; desconéctalo.']];
+const cards=CARDS.map((c,i)=>{const g=E('g',{},g4);
+ E('rect',{x:40,y:0,width:320,height:60,rx:5,fill:'var(--card)',class:'ln',style:'stroke-width:2.5'},g);
+ const ic=E('g',{transform:'translate(72 30)'},g);E('path',{d:ICON[i],class:'ln gr',style:'stroke-width:2.5'},ic);
+ TX(g,100,27,c[0],15,{style:'fill:var(--ink)'});TX(g,100,45,c[1],11,{style:'font-weight:500'});
+ const ck=E('path',{d:'M-9 0l6 7 13-15',transform:'translate(338 30)',class:'ln gr',style:'stroke-width:4'},g);
+ return{g,ck,y:32+i*72,s:[.3,2.3,4.7][i]}});
+
+/* ---- Motor de la línea de tiempo ---- */
+let t=0,playing=false,started=false,last=0,lastBeat=-1,narr=false;
+const T={paso:$('#paso'),tit:$('#tit'),cap:$('#cap'),est:$('#est'),over:$('#over'),play:$('#play'),time:$('#time'),fill:$('#fill'),track:$('#track')};
+
+function render(){
+ const sc=Math.min(3,Math.floor(t/SC)),lt=t-sc*SC;
+ G.forEach((g,i)=>g.style.display=i===sc?'':'none');
+ G[sc].setAttribute('opacity',ease(clamp(lt/.4)));
+ let est='';
+ if(sc===0){
+  const land=pills.map((p,i)=>ease(clamp((lt-(3+.7*i))/.9)));
+  pills.forEach((p,i)=>{const u=land[i],on=u>=1;
+   p.g.setAttribute('transform',`translate(${67+253*u} ${p.y})`);
+   p.g.setAttribute('opacity',ease(clamp((lt-(2+.3*i))/.4)));
+   p.r.setAttribute('fill',on?'var(--green)':'var(--bg)');p.r.style.stroke=on?'var(--green)':'';
+   p.t.textContent=(on?'✓ ':'')+p.n;p.t.style.fill=on?'var(--on-green)':'var(--ink)'});
+  est=lt<3?'Estado: esto es tu móvil.':(land[2]>=1?'Estado: el ordenador ya tiene lo mismo.':'Estado: pasando las protecciones al ordenador.');
+ }
+ if(sc===1){
+  const o=ease(clamp((lt-3.3)/.4));
+  L.setAttribute('opacity',1-.65*o);R.setAttribute('opacity',.35+.65*o);
+  adL.setAttribute('opacity',1-ease(clamp((lt-1.4)/.6)));
+  const s=ease(clamp((lt-1)/.5));shL.setAttribute('transform',`translate(115 124) scale(${s})`);
+  const u=((lt*.3)%1)*4,k=Math.min(3,Math.floor(u)),f=u-k;
+  dot.setAttribute('cx',P[k][0]+(P[k+1][0]-P[k][0])*f);dot.setAttribute('cy',P[k][1]+(P[k+1][1]-P[k][1])*f);
+  est=lt<3.5?'Brave: bloquea anuncios y rastreadores.':'Tor: esconde quién eres y desde dónde te conectas.';
+ }
+ if(sc===2){
+  let y=74,vis=0;
+  it3.forEach(it=>{let m=1;if(it.k==='a'){m=1-ease(clamp((lt-it.b)/.5));if(m>.5)vis++}
+   it.g.setAttribute('transform',`translate(0 ${y})`);it.g.setAttribute('opacity',it.k==='a'?m:1);y+=it.h*m});
+  const on=lt>=3.5;
+  ub.setAttribute('fill',on?'var(--green)':'none');ub.style.stroke=on?'var(--green)':'';ubT.style.fill=on?'var(--on-green)':'';
+  est=vis?'Estado: la web se lee entre anuncios.':'Estado: web limpia con uBlock Origin.';
+ }
+ if(sc===3){
+  cards.forEach(c=>{const p=ease(clamp((lt-c.s)/.5));
+   c.g.setAttribute('transform',`translate(0 ${c.y+(1-p)*14})`);c.g.setAttribute('opacity',p);
+   c.ck.setAttribute('opacity',ease(clamp((lt-c.s-1)/.4)))});
+  const i=lt>=4.7?2:(lt>=2.3?1:0);
+  est=`Costumbre ${i+1} de 3: ${['actualizaciones al día.','cuenta normal a diario.','copias de seguridad.'][i]}`;
+ }
+ T.paso.textContent='02 · Paso '+(sc+1);T.tit.textContent=TIT[sc];T.est.textContent=est;
+ let b=0;BEATS.forEach((x,i)=>{if(t>=x[0])b=i});
+ T.cap.textContent=BEATS[b][1];
+ if(b!==lastBeat){lastBeat=b;if(playing)speak()}
+ T.time.textContent=`0:${String(Math.floor(t)).padStart(2,'0')} / 0:30`;
+ T.fill.style.width=(t/D*100)+'%';T.track.setAttribute('aria-valuenow',Math.floor(t));
+ document.querySelectorAll('[data-go]').forEach(c=>c.setAttribute('aria-pressed',+c.dataset.go===sc*SC));
+ const ended=t>=D&&!playing;
+ T.over.hidden=!(!started||ended);
+ $('#bigplay').textContent=ended?'↻ Volver a verlo':'▶ Ver vídeo (30 s)';
+ T.play.textContent=playing?'Pausa':(ended?'Repetir':'Reproducir');
+}
+function speak(){
+ if(!narr||!('speechSynthesis' in window))return;
+ speechSynthesis.cancel();
+ const u=new SpeechSynthesisUtterance(BEATS[Math.max(0,lastBeat)][1]);u.lang='es-ES';u.rate=1.05;speechSynthesis.speak(u);
+}
+function tick(now){
+ if(!playing)return;
+ t=Math.min(D,t+(now-last)/1000);last=now;
+ if(t>=D)playing=false;
+ render();
+ if(playing)requestAnimationFrame(tick);
+}
+function play(){if(t>=D)t=0;started=playing=true;last=performance.now();lastBeat=-1;render();speak();requestAnimationFrame(tick)}
+function pause(){playing=false;if('speechSynthesis' in window)speechSynthesis.cancel();render()}
+function seek(s){t=clamp(s,0,D);lastBeat=-1;render();if(playing)speak()}
+
+T.play.onclick=()=>playing?pause():play();
+$('#bigplay').onclick=play;
+$('#reset').onclick=()=>{t=0;if('speechSynthesis' in window)speechSynthesis.cancel();play()};
+document.querySelectorAll('[data-go]').forEach(c=>c.onclick=()=>{started=true;seek(+c.dataset.go);if(!playing)play()});
+T.track.addEventListener('pointerdown',e=>{const r=T.track.getBoundingClientRect();started=true;seek((e.clientX-r.left)/r.width*D)});
+T.track.addEventListener('keydown',e=>{if(e.key==='ArrowRight')seek(t+2);if(e.key==='ArrowLeft')seek(t-2)});
+$('#subs').onclick=e=>{const on=e.target.getAttribute('aria-pressed')!=='true';e.target.setAttribute('aria-pressed',on);T.cap.classList.toggle('off',!on)};
+$('#voz').onclick=e=>{narr=e.target.getAttribute('aria-pressed')!=='true';e.target.setAttribute('aria-pressed',narr);if(narr)speak();else if('speechSynthesis' in window)speechSynthesis.cancel()};
+document.addEventListener('keydown',e=>{if(e.code==='Space'&&!/BUTTON|INPUT/.test(e.target.tagName)&&e.target!==T.track){e.preventDefault();playing?pause():play()}});
+render();
+</script>
+</body>
+</html>

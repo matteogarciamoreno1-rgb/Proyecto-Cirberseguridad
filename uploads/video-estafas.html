@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Protégete online – Estafas (vídeo interactivo)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@500;700;800&family=Newsreader:ital,opsz,wght@0,6..72,400;1,6..72,400&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f3eee5;--card:#e6e3da;--ink:#1f2933;--ink-soft:#4a5560;--green:#2d5b45;--on-green:#f3eee5;--alert:#a63d2f;--grid:rgba(31,41,51,.06);
+--fd:"Schibsted Grotesk","Helvetica Neue",Arial,sans-serif;--fb:"Newsreader",Georgia,serif;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#161d22;--card:#1f282e;--ink:#f3eee5;--ink-soft:#b9c0c6;--green:#6fb28f;--on-green:#12201a;--alert:#ef8a76;--grid:rgba(243,238,229,.06)}}
+:root[data-theme="dark"]{--bg:#161d22;--card:#1f282e;--ink:#f3eee5;--ink-soft:#b9c0c6;--green:#6fb28f;--on-green:#12201a;--alert:#ef8a76;--grid:rgba(243,238,229,.06)}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg) linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);background-size:72px 72px;color:var(--ink);font-family:var(--fb);font-size:1.15rem;min-height:100vh}
+.wrap{max-width:1100px;margin:0 auto;padding:1.2rem}
+h1{font:800 1.4rem var(--fd);letter-spacing:-.02em;margin:0 0 .8rem}
+.stage{position:relative;container-type:inline-size;aspect-ratio:16/9;background:var(--bg);border:2px solid var(--ink);border-radius:4px;display:grid;grid-template-columns:1fr 1.2fr;align-items:center;gap:2.5cqw;padding:3cqw 4cqw;overflow:hidden}
+.paso{font:700 2cqw var(--fd);color:var(--ink-soft);margin:0 0 .5cqw}
+h2{font:800 3.6cqw/1.07 var(--fd);letter-spacing:-.03em;margin:0 0 1.5cqw}
+.cap{font-size:2.3cqw;line-height:1.3;margin:0 0 1.4cqw;min-height:9cqw}
+.cap.off{visibility:hidden}
+.estado{font:700 1.7cqw/1.3 var(--fd);margin:0 0 1.4cqw;min-height:2.4cqw}
+.aviso{border:2px solid var(--ink);border-radius:4px;background:var(--card);padding:1cqw 1.4cqw;min-height:8.4cqw;opacity:0;transition:opacity .3s}
+.aviso b{display:block;font:700 1.7cqw var(--fd);color:var(--alert);margin-bottom:.2cqw}
+.aviso span{font-size:1.75cqw;line-height:1.3}
+.mon{width:100%;height:auto;max-height:50cqw;justify-self:center}
+.ln{fill:none;stroke:var(--ink);stroke-width:3;stroke-linecap:round;stroke-linejoin:round}
+.gr{stroke:var(--green)}.al{stroke:var(--alert)}
+.t{font-family:var(--fd);font-weight:700;fill:var(--ink-soft)}
+.over{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:color-mix(in srgb,var(--bg) 78%,transparent)}
+.over[hidden]{display:none}
+.btn{font:700 1.05rem var(--fd);background:var(--green);color:var(--on-green);border:2px solid var(--green);border-radius:4px;padding:.8rem 1.3rem;cursor:pointer}
+.btn.out{background:transparent;color:var(--ink);border-color:var(--ink);padding:.6rem 1rem;font-size:.95rem}
+.btn.out[aria-pressed="true"]{background:var(--ink);color:var(--bg)}
+.btn:hover{filter:brightness(1.12)}
+.btn.big{font-size:1.5rem;padding:1.1rem 2rem}
+.btn:focus-visible,.track:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
+.bar{display:flex;flex-wrap:wrap;gap:.6rem;align-items:center;margin-top:1rem}
+.time{font:700 1rem var(--fd);color:var(--ink-soft);min-width:5.5ch}
+.track{position:relative;flex:1 1 220px;height:18px;border:2px solid var(--ink);border-radius:4px;cursor:pointer;background:var(--bg)}
+.fill{position:absolute;inset:0 auto 0 0;width:0;background:var(--green)}
+.mk{position:absolute;top:-2px;bottom:-2px;width:2px;background:var(--ink)}
+.chips{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:.8rem}
+@media (max-width:700px){
+ .stage{aspect-ratio:auto;grid-template-columns:1fr;padding:1.2rem;gap:1rem}
+ .paso{font-size:1rem}h2{font-size:1.7rem;margin-bottom:.8rem}.cap{font-size:1.2rem;min-height:5.5rem}.estado{font-size:1rem}
+ .aviso{min-height:0;padding:.6rem .8rem}.aviso b{font-size:1rem}.aviso span{font-size:1rem}.mon{max-height:none}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<h1>Protégete online · 04 Estafas: conócelas y perderán su fuerza · 42 segundos</h1>
+
+<div class="stage">
+ <div>
+  <p class="paso" id="paso"></p>
+  <h2 id="tit"></h2>
+  <p class="cap" id="cap" aria-live="polite"></p>
+  <p class="estado" id="est"></p>
+  <div class="aviso" id="aviso"><b>⚠ Ojo</b><span id="avx"></span></div>
+ </div>
+ <svg class="mon" viewBox="0 0 400 310" role="img" aria-label="Dibujo que muestra la animación de la estafa">
+  <rect class="ln" x="8" y="8" width="384" height="294" rx="4"/>
+  <g id="stg"></g>
+ </svg>
+ <div class="over" id="over"><button class="btn big" id="bigplay">▶ Ver vídeo (42 s)</button></div>
+</div>
+
+<div class="bar">
+ <button class="btn" id="play">Reproducir</button>
+ <button class="btn out" id="reset">Reiniciar</button>
+ <span class="time" id="time">0:00 / 0:42</span>
+ <div class="track" id="track" role="slider" tabindex="0" aria-label="Posición del vídeo" aria-valuemin="0" aria-valuemax="42" aria-valuenow="0"><div class="fill" id="fill"></div></div>
+</div>
+<div class="chips" id="chips">
+ <button class="btn out" id="subs" aria-pressed="true">Subtítulos</button>
+ <button class="btn out" id="voz" aria-pressed="false">Narración</button>
+</div>
+</div>
+
+<script>
+const D=42,$=s=>document.querySelector(s);
+const clamp=(x,a=0,b=1)=>Math.min(b,Math.max(a,x)),ease=x=>x*x*(3-2*x);
+const NS='http://www.w3.org/2000/svg';
+function E(tag,a={},p){const e=document.createElementNS(NS,tag);for(const k in a)e.setAttribute(k,a[k]);if(p)p.appendChild(e);return e}
+function TX(p,x,y,s,size,o={}){const e=E('text',Object.assign({x,y,'font-size':size,class:'t'},o),p);e.textContent=s;return e}
+const W=(s,sz=12,b=false)=>Math.round(s.length*(b?.56:.5)*sz);
+const ML=(g,x,y,s,o={})=>{const sz=o.size||12;return TX(g,x,y,s,sz,{textLength:W(s,sz,o.bold),lengthAdjust:'spacingAndGlyphs',style:'fill:var(--ink);font-weight:'+(o.bold?700:500)+(o.it?';font-style:italic':'')})};
+
+const STARTS=[0,4,9,14,19,24,29,34,39];
+const NAMES=['Intro','1 · SMS','2 · Técnico','3 · «Hola mamá»','4 · Falso banco','5 · Bizum','6 · Inversiones','7 · Correo','Final'];
+const TIT=['Estafas: conócelas y perderán su fuerza','SMS falsos (smishing)','La llamada del falso técnico','«Hola mamá, he cambiado de número»','El falso banco que llama','Bizum y compraventa: el pago al revés','Inversiones milagro y empleos falsos','Phishing por correo electrónico','Y si alguna vez caes: tiene arreglo'];
+const PASO=['04 · Estafas',...[1,2,3,4,5,6,7].map(n=>`04 · Estafa ${n} de 7`),'04 · Para terminar'];
+const AVX=['','La DGT no avisa multas por SMS con enlace de pago, y tu banco no «bloquea tarjetas» pidiendo datos.','Ninguna empresa seria te llama porque tu ordenador tiene un virus: no puede saberlo.','Si te dicen que no llames ni compruebes nada, es que no quieren que descubras el engaño.','Tu banco nunca te pedirá claves ni códigos de SMS. La «cuenta segura» no existe.','Una solicitud («X te pide dinero») no es un ingreso («X te ha enviado dinero»).','Ganancias grandes, rápidas y sin riesgo no existen. Si para retirar te piden pagar más, es estafa.','Amenaza con plazo, saludo genérico y un enlace que no es el oficial: señales claras.',''];
+const CAPS=[
+ ['Casi todas las estafas son el mismo truco con distinto disfraz.'],
+ ['Un SMS dice que tu paquete está retenido y te pide pagar 1,99 € en un enlace.','No pulses el enlace. Si esperas un paquete, entra tú en la web oficial.'],
+ ['Alguien llama diciendo ser de Microsoft: tu ordenador tiene un virus.','Cuelga. Ninguna empresa seria te llama por eso ni te pide control remoto.'],
+ ['Un WhatsApp de un número nuevo: «Hola mamá, necesito dinero ya».','Llama al número de siempre y pacta una palabra clave familiar.'],
+ ['Te llaman desde el número real de tu banco… pero ese número se puede falsificar.','Cuelga y llama tú al número oficial de tu tarjeta o entra en la app.'],
+ ['Vendes algo y el «comprador» te envía una solicitud de Bizum, no un ingreso.','Antes de aceptar un Bizum, lee: ¿es un ingreso o una solicitud?'],
+ ['Famosos, grupos o webs que prometen ganar mucho, rápido y sin riesgo.','No inviertas desde un anuncio. Comprueba en la CNMV si la empresa está autorizada.'],
+ ['Un correo que imita a tu banco o a Hacienda y te amenaza con un plazo.','No uses el enlace: escribe tú la dirección oficial o abre la app.'],
+ ['Si alguna vez caes, le pasa a gente lista todos los días, y tiene arreglo.']
+];
+const BEATS=[];CAPS.forEach((c,i)=>c.forEach((s,k)=>BEATS.push([STARTS[i]+(k?2.8:0),s])));
+
+/* ---- utilidades de dibujo ---- */
+const SCN=[];
+function newScene(){const g=E('g',{},$('#stg'));const S={g,flags:[],strip:null,ph:null};SCN.push(S);return S}
+function card(g,x,y,w,h,title,right){E('rect',{x,y,width:w,height:h,rx:6,fill:'var(--card)',class:'ln',style:'stroke-width:2.5'},g);
+ if(title){TX(g,x+14,y+20,title,10);E('line',{x1:x+14,y1:y+28,x2:x+w-14,y2:y+28,class:'ln',style:'stroke-width:1.5;stroke:var(--ink-soft);opacity:.5'},g)}
+ if(right)TX(g,x+w-14,y+20,right,10,{'text-anchor':'end'})}
+function flag(S,t,label,box,px,py){
+ const g=E('g',{},S.g);
+ if(box)E('rect',{x:box[0],y:box[1],width:box[2],height:box[3],rx:3,class:'ln al',style:'stroke-width:2;stroke-dasharray:4 3'},g);
+ const w=Math.round(label.length*5.5+16),pg=E('g',{transform:`translate(${px-w} ${py-9})`},g);
+ E('rect',{width:w,height:18,rx:9,fill:'var(--alert)'},pg);
+ TX(pg,w/2,12.5,label,10,{'text-anchor':'middle',style:'fill:var(--bg)'});
+ S.flags.push({g,t});
+}
+function strip(S,txt){const g=E('g',{},S.g);E('rect',{x:40,y:240,width:320,height:40,rx:4,fill:'var(--green)'},g);
+ E('path',{d:'M56 260l6 7 12-14',class:'ln',style:'stroke:var(--on-green);stroke-width:3.5'},g);
+ TX(g,84,265,txt,12.5,{style:'fill:var(--on-green)'});S.strip=g}
+function phone(S,name,sub){const p=S.ph=E('g',{},S.g);
+ E('rect',{x:30,y:36,width:76,height:150,rx:10,class:'ln'},p);E('line',{x1:52,y1:46,x2:84,y2:46,class:'ln',style:'stroke-width:2.5'},p);
+ TX(p,68,74,'Llamada entrante',8,{'text-anchor':'middle'});TX(p,68,100,name,12,{'text-anchor':'middle',style:'fill:var(--ink)'});TX(p,68,114,sub,8.5,{'text-anchor':'middle',style:'font-weight:500'});
+ E('circle',{cx:52,cy:158,r:11,class:'ln al',style:'stroke-width:2.5'},p);E('path',{d:'M47 153l10 10M57 153l-10 10',class:'ln al',style:'stroke-width:2.5'},p);
+ E('circle',{cx:84,cy:158,r:11,class:'ln gr',style:'stroke-width:2.5'},p);E('path',{d:'M79 158l4 4 7-8',class:'ln gr',style:'stroke-width:2.5'},p)}
+function bubble(g,x,y,w,h){E('rect',{x,y,width:w,height:h,rx:8,fill:'var(--card)',class:'ln',style:'stroke-width:2.5'},g);E('path',{d:`M${x} ${y+14}l-9 8 9 8`,class:'ln',style:'stroke-width:2.5'},g)}
+
+/* ---- 0 · Intro ---- */
+const s0=newScene();
+const intro=[['Prisa','M0-6V0l5 3'],['Miedo','M0-11l11 20h-22ZM0-3v6'],['Ilusión','M0-11l3 7 8 1-6 5 2 8-7-4-7 4 2-8-6-5 8-1Z'],['Un enlace o una transferencia','M-3-3l6 6']].map((r,i)=>{
+ const g=E('g',{},s0.g);
+ E('rect',{x:40,y:44+i*58,width:320,height:46,rx:4,fill:'var(--card)',class:'ln',style:'stroke-width:2.5'},g);
+ const ic=E('g',{transform:`translate(70 ${44+i*58+23})`},g);
+ if(i===0)E('circle',{r:12,class:'ln'},ic);if(i===3){E('circle',{cx:-5,r:7,class:'ln'},ic);E('circle',{cx:5,r:7,class:'ln'},ic)}
+ if(i<3)E('path',{d:r[1],class:'ln',style:'stroke-width:2.5'},ic);
+ TX(g,100,44+i*58+30,r[0],i===3?17:21,{style:'fill:var(--ink)'});
+ return g});
+
+/* ---- 1 · SMS falso ---- */
+const s1=newScene();card(s1.g,40,30,320,170,'Mensajes · Número desconocido','9:12');
+[[78,'CORREOS-INFO: su paquete'],[94,'está retenido en aduana.'],[118,'Pague en menos de 2 horas'],[134,'o será devuelto. Abone 1,99 €']].forEach(l=>ML(s1.g,54,l[0],l[1]));
+ML(s1.g,54,160,'correos-entrega-paquete.xyz/pagar',{size:11,bold:true});
+flag(s1,1.2,'remitente raro',[50,66,W('CORREOS-INFO:')+8,16],346,74);
+flag(s1,1.9,'plazo urgente',[50,106,W('Pague en menos de 2 horas')+8,16],346,114);
+flag(s1,2.6,'enlace raro',[50,148,W('correos-entrega-paquete.xyz/pagar',11,true)+8,16],346,156);
+strip(s1,'Borra el SMS. Ve tú a la web oficial.');
+
+/* ---- 2 · Falso técnico ---- */
+const s2=newScene();phone(s2,'Microsoft','Soporte técnico');bubble(s2.g,120,36,252,78);
+['«Soy técnico de Microsoft. Su','ordenador tiene un virus y está','enviando errores. ¡Actúe ya!»'].forEach((s,i)=>ML(s2.g,134,58+i*16,s,{it:true}));
+E('rect',{x:120,y:126,width:252,height:64,rx:4,class:'ln',style:'stroke-width:2.5'},s2.g);E('line',{x1:120,y1:144,x2:372,y2:144,class:'ln',style:'stroke-width:1.5'},s2.g);
+TX(s2.g,132,139,'Control remoto',9);ML(s2.g,132,163,'Instalar programa de control remoto',{size:11});ML(s2.g,132,180,'Código de acceso: 482 193 507',{size:11,bold:true});
+flag(s2,1.2,'nadie llama así',[128,46,W('ordenador tiene un virus y está')+8,36],152,210);
+flag(s2,1.9,'control remoto',[116,122,260,72],251,210);
+flag(s2,2.6,'prisa y miedo',[128,78,W('enviando errores. ¡Actúe ya!»')+8,16],345,210);
+strip(s2,'Cuelga. Nunca des un código de acceso.');
+
+/* ---- 3 · «Hola mamá» ---- */
+const s3=newScene();card(s3.g,40,30,320,170,'WhatsApp · Número desconocido');
+[[80,'Hola mamá, este es mi nuevo'],[96,'número. Tuve un problema y'],[116,'necesito 900 € ya: ¿me haces'],[132,'una transferencia? No me'],[152,'llames, luego te explico.']].forEach(l=>ML(s3.g,54,l[0],l[1]));
+flag(s3,1.2,'número nuevo',[50,68,W('Hola mamá, este es mi nuevo')+8,32],346,84);
+flag(s3,1.9,'urgencia de dinero',[50,104,W('necesito 900 € ya: ¿me haces')+8,32],346,120);
+flag(s3,2.6,'no llames',[50,140,W('llames, luego te explico.')+8,16],346,148);
+strip(s3,'Llama tú al número de siempre.');
+
+/* ---- 4 · Falso banco ---- */
+const s4=newScene();phone(s4,'Tu banco','Número oficial');bubble(s4.g,120,36,252,84);
+['«Hemos detectado un cargo raro.','Mueva su dinero a una «cuenta','segura» y no cuelgue. Dígame','el código que le llega por SMS.»'].forEach((s,i)=>ML(s4.g,134,58+i*16,s,{it:true}));
+TX(s4.g,246,192,'Ese número se puede falsificar (spoofing)',11,{'text-anchor':'middle'});
+flag(s4,1.2,'cuenta segura',[128,62,W('Mueva su dinero a una «cuenta')+8,16],158,150);
+flag(s4,1.9,'no cuelgues',[128,78,W('segura» y no cuelgue. Dígame')+8,16],241,150);
+flag(s4,2.6,'pide códigos',[128,94,W('el código que le llega por SMS.»')+8,16],329,150);
+strip(s4,'Cuelga y llama tú al número oficial.');
+
+/* ---- 5 · Bizum ---- */
+const s5=newScene();bubble(s5.g,40,30,320,74);
+['«Me encanta la bici, no regateo.','Te acabo de mandar el Bizum','de 250 €: acéptalo ya y la','envío hoy, que me urge.»'].forEach((s,i)=>ML(s5.g,54,50+i*14,s,{size:11.5,it:true}));
+card(s5.g,40,118,150,108);TX(s5.g,54,138,'INGRESO',9,{style:'fill:var(--green)'});TX(s5.g,54,168,'+250 €',22,{style:'fill:var(--green)'});ML(s5.g,54,190,'Ana te ha enviado 250 €',{size:10});ML(s5.g,54,208,'Ya está en tu cuenta ✓',{size:10});
+card(s5.g,210,118,150,108);TX(s5.g,224,138,'SOLICITUD',9,{style:'fill:var(--alert)'});TX(s5.g,224,168,'−250 €',22,{style:'fill:var(--alert)'});ML(s5.g,224,188,'Ana te pide 250 €',{size:10});
+E('rect',{x:224,y:196,width:122,height:22,rx:4,fill:'var(--alert)'},s5.g);TX(s5.g,285,211,'Aceptar',11,{'text-anchor':'middle',style:'fill:var(--bg)'});
+flag(s5,1.2,'solicitud, no ingreso',[206,114,158,116],356,118);
+flag(s5,1.9,'mucha prisa',[50,67,W('de 250 €: acéptalo ya y la',11.5)+8,28],346,82);
+flag(s5,2.6,'sin regatear',[50,39,W('«Me encanta la bici, no regateo.',11.5)+8,14],346,46);
+strip(s5,'Lee: ¿ingreso o solicitud?');
+
+/* ---- 6 · Inversiones ---- */
+const s6=newScene();card(s6.g,40,30,320,170,'Anuncio · Patrocinado');
+[[70,'«Gana 4.300 € en una semana'],[86,'con este sistema. Empieza'],[104,'con solo 250 €. Quedan'],[120,'3 plazas hoy.»']].forEach(l=>ML(s6.g,54,l[0],l[1],{it:true}));
+E('rect',{x:54,y:140,width:292,height:44,rx:4,fill:'var(--bg)',class:'ln',style:'stroke-width:2'},s6.g);
+ML(s6.g,66,158,'Retirar mi dinero',{bold:true});ML(s6.g,66,174,'Antes, pague una comisión.',{size:11});
+flag(s6,1.2,'ganancia fácil',[50,58,W('«Gana 4.300 € en una semana')+8,32],346,66);
+flag(s6,1.9,'prisa: plazas',[50,92,W('con solo 250 €. Quedan')+8,32],346,106);
+flag(s6,2.6,'pagar para retirar',[50,136,300,54],346,136);
+strip(s6,'No inviertas desde un anuncio.');
+
+/* ---- 7 · Phishing ---- */
+const s7=newScene();card(s7.g,40,30,320,170);
+ML(s7.g,54,52,'De: avisos@banco-seguro-info.com',{size:11});ML(s7.g,54,70,'Asunto: ¡Cuenta suspendida!',{size:11,bold:true});
+E('line',{x1:54,y1:80,x2:346,y2:80,class:'ln',style:'stroke-width:1.5;stroke:var(--ink-soft);opacity:.5'},s7.g);
+[[100,'Estimado cliente: hemos visto'],[116,'actividad inusual. Verifique su'],[132,'identidad en 24 horas aquí:']].forEach(l=>ML(s7.g,54,l[0],l[1]));
+ML(s7.g,54,158,'banco-verifica.com/acceso',{bold:true});
+flag(s7,1.0,'remitente raro',[50,41,W('De: avisos@banco-seguro-info.com',11)+8,15],346,48);
+flag(s7,1.5,'amenaza y plazo',[50,59,W('Asunto: ¡Cuenta suspendida!',11,true)+8,15],346,66);
+flag(s7,2.0,'saludo genérico',[50,89,W('Estimado cliente: hemos visto')+8,15],346,96);
+flag(s7,2.5,'enlace distinto',[50,146,W('banco-verifica.com/acceso',12,true)+8,16],346,154);
+strip(s7,'Escribe tú la dirección oficial.');
+
+/* ---- 8 · Final ---- */
+const s8=newScene();
+const sh=E('g',{},s8.g);
+E('path',{d:'M0-36L-32-24v24c0 22 15 35 32 44 17-9 32-22 32-44v-24Z',class:'ln gr',style:'stroke-width:3.5'},sh);E('path',{d:'M-13 2l10 10 18-22',class:'ln gr',style:'stroke-width:3.5'},sh);
+const f1=TX(s8.g,200,232,'Conócelas y perderán su fuerza',20,{'text-anchor':'middle',style:'fill:var(--ink)'});
+const f2=TX(s8.g,200,262,'Si alguna vez caes, tiene arreglo.',13,{'text-anchor':'middle'});
+
+/* ---- Motor ---- */
+let t=0,playing=false,started=false,last=0,lastBeat=-1,narr=false;
+const T={paso:$('#paso'),tit:$('#tit'),cap:$('#cap'),est:$('#est'),over:$('#over'),play:$('#play'),time:$('#time'),fill:$('#fill'),track:$('#track')};
+STARTS.forEach((s,i)=>{
+ const b=document.createElement('button');b.className='btn out';b.textContent=NAMES[i];b.dataset.go=s;
+ b.onclick=()=>{started=true;seek(s);if(!playing)play()};$('#chips').insertBefore(b,$('#subs'));
+ if(i){const m=document.createElement('div');m.className='mk';m.style.left=(s/D*100)+'%';T.track.appendChild(m)}
+});
+
+function render(){
+ let sc=0;STARTS.forEach((s,i)=>{if(t>=s)sc=i});
+ const lt=t-STARTS[sc],S=SCN[sc];
+ SCN.forEach((x,i)=>x.g.style.display=i===sc?'':'none');
+ S.g.setAttribute('opacity',ease(clamp(lt/.4)));
+ let est='';
+ if(sc===0){
+  intro.forEach((g,i)=>{const p=ease(clamp((lt-.4-i*.7)/.4));g.setAttribute('opacity',p);g.setAttribute('transform',`translate(${(1-p)*-24} 0)`)});
+  est='Siempre el mismo truco, distinto disfraz.';
+ }else if(sc===8){
+  const p=ease(clamp(lt/.6));sh.setAttribute('transform',`translate(200 120) scale(${2.4*p})`);
+  f1.setAttribute('opacity',ease(clamp((lt-.5)/.4)));f2.setAttribute('opacity',ease(clamp((lt-1.2)/.4)));
+  est='Conocerlas es la mejor defensa.';
+ }else{
+  let n=0;S.flags.forEach(f=>{const p=ease(clamp((lt-f.t)/.3));f.g.setAttribute('opacity',p);if(p>=1)n++});
+  const k=ease(clamp((lt-2.8)/.4));S.strip.setAttribute('opacity',k);S.strip.setAttribute('transform',`translate(0 ${(1-k)*20})`);
+  if(S.ph)S.ph.setAttribute('transform',lt<2.8?`rotate(${Math.sin(lt*28)*2.5} 68 111)`:'');
+  est=`Señales de alarma: ${n} de ${S.flags.length}.`;
+ }
+ T.paso.textContent=PASO[sc];T.tit.textContent=TIT[sc];T.est.textContent=est;
+ $('#avx').textContent=AVX[sc];$('#aviso').style.opacity=(AVX[sc]&&lt>=3.4)?1:0;
+ let b=0;BEATS.forEach((x,i)=>{if(t>=x[0])b=i});
+ T.cap.textContent=BEATS[b][1];
+ if(b!==lastBeat){lastBeat=b;if(playing)speak()}
+ T.time.textContent=`0:${String(Math.floor(t)).padStart(2,'0')} / 0:42`;
+ T.fill.style.width=(t/D*100)+'%';T.track.setAttribute('aria-valuenow',Math.floor(t));
+ document.querySelectorAll('[data-go]').forEach(c=>c.setAttribute('aria-pressed',+c.dataset.go===STARTS[sc]));
+ const ended=t>=D&&!playing;
+ T.over.hidden=!(!started||ended);
+ $('#bigplay').textContent=ended?'↻ Volver a verlo':'▶ Ver vídeo (42 s)';
+ T.play.textContent=playing?'Pausa':(ended?'Repetir':'Reproducir');
+}
+function speak(){
+ if(!narr||!('speechSynthesis' in window))return;
+ speechSynthesis.cancel();
+ const u=new SpeechSynthesisUtterance(BEATS[Math.max(0,lastBeat)][1]);u.lang='es-ES';u.rate=1.05;speechSynthesis.speak(u);
+}
+function tick(now){
+ if(!playing)return;
+ t=Math.min(D,t+(now-last)/1000);last=now;
+ if(t>=D)playing=false;
+ render();
+ if(playing)requestAnimationFrame(tick);
+}
+function play(){if(t>=D)t=0;started=playing=true;last=performance.now();lastBeat=-1;render();speak();requestAnimationFrame(tick)}
+function pause(){playing=false;if('speechSynthesis' in window)speechSynthesis.cancel();render()}
+function seek(s){t=clamp(s,0,D);lastBeat=-1;render();if(playing)speak()}
+
+T.play.onclick=()=>playing?pause():play();
+$('#bigplay').onclick=play;
+$('#reset').onclick=()=>{t=0;if('speechSynthesis' in window)speechSynthesis.cancel();play()};
+T.track.addEventListener('pointerdown',e=>{const r=T.track.getBoundingClientRect();started=true;seek((e.clientX-r.left)/r.width*D)});
+T.track.addEventListener('keydown',e=>{if(e.key==='ArrowRight')seek(t+2);if(e.key==='ArrowLeft')seek(t-2)});
+$('#subs').onclick=e=>{const on=e.currentTarget.getAttribute('aria-pressed')!=='true';e.currentTarget.setAttribute('aria-pressed',on);T.cap.classList.toggle('off',!on)};
+$('#voz').onclick=e=>{narr=e.currentTarget.getAttribute('aria-pressed')!=='true';e.currentTarget.setAttribute('aria-pressed',narr);if(narr)speak();else if('speechSynthesis' in window)speechSynthesis.cancel()};
+document.addEventListener('keydown',e=>{if(e.code==='Space'&&!/BUTTON|INPUT/.test(e.target.tagName)&&e.target!==T.track){e.preventDefault();playing?pause():play()}});
+render();
+</script>
+</body>
+</html>

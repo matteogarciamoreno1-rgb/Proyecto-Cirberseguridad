@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Protégete online – vídeo interactivo</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@500;700;800&family=Newsreader:ital,opsz,wght@0,6..72,400;1,6..72,400&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f3eee5;--card:#e6e3da;--ink:#1f2933;--ink-soft:#4a5560;--green:#2d5b45;--on-green:#f3eee5;--grid:rgba(31,41,51,.06);
+--fd:"Schibsted Grotesk","Helvetica Neue",Arial,sans-serif;--fb:"Newsreader",Georgia,serif;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#161d22;--card:#1f282e;--ink:#f3eee5;--ink-soft:#b9c0c6;--green:#6fb28f;--on-green:#12201a;--grid:rgba(243,238,229,.06)}}
+:root[data-theme="dark"]{--bg:#161d22;--card:#1f282e;--ink:#f3eee5;--ink-soft:#b9c0c6;--green:#6fb28f;--on-green:#12201a;--grid:rgba(243,238,229,.06)}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg) linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);background-size:72px 72px;color:var(--ink);font-family:var(--fb);font-size:1.15rem;min-height:100vh}
+.wrap{max-width:1100px;margin:0 auto;padding:1.2rem}
+h1{font:800 1.4rem var(--fd);letter-spacing:-.02em;margin:0 0 .8rem}
+.stage{position:relative;container-type:inline-size;aspect-ratio:16/9;background:var(--bg);border:2px solid var(--ink);border-radius:4px;display:grid;grid-template-columns:1.25fr 1fr;align-items:center;gap:2cqw;padding:3cqw 4cqw;overflow:hidden}
+.paso{font:700 2.1cqw var(--fd);color:var(--ink-soft);margin:0 0 .6cqw}
+h2{font:800 4.6cqw/1.05 var(--fd);letter-spacing:-.03em;margin:0 0 2cqw}
+.cap{font-size:2.8cqw;line-height:1.35;margin:0 0 2cqw;min-height:7.6cqw;max-width:34ch}
+.cap.off{visibility:hidden}
+.estado{font:700 1.9cqw/1.3 var(--fd);margin:0;color:var(--ink)}
+.phone{justify-self:center;height:50cqw;width:auto;max-width:100%}
+.ln{fill:none;stroke:var(--ink);stroke-width:3;stroke-linecap:round;stroke-linejoin:round}
+.gr{stroke:var(--green)}
+.t{font-family:var(--fd);font-weight:700;fill:var(--ink-soft)}
+.over{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:color-mix(in srgb,var(--bg) 78%,transparent)}
+.over[hidden]{display:none}
+.btn{font:700 1.05rem var(--fd);background:var(--green);color:var(--on-green);border:2px solid var(--green);border-radius:4px;padding:.8rem 1.3rem;cursor:pointer}
+.btn.out{background:transparent;color:var(--ink);border-color:var(--ink)}
+.btn.out[aria-pressed="true"]{background:var(--ink);color:var(--bg)}
+.btn:hover{filter:brightness(1.12)}
+.btn.big{font-size:1.5rem;padding:1.1rem 2rem}
+.btn:focus-visible,.track:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
+.bar{display:flex;flex-wrap:wrap;gap:.6rem;align-items:center;margin-top:1rem}
+.time{font:700 1rem var(--fd);color:var(--ink-soft);min-width:5.5ch}
+.track{position:relative;flex:1 1 220px;height:18px;border:2px solid var(--ink);border-radius:4px;cursor:pointer;background:var(--bg)}
+.fill{position:absolute;inset:0 auto 0 0;width:0;background:var(--green)}
+.mk{position:absolute;top:-2px;bottom:-2px;width:2px;background:var(--ink)}
+.chips{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:.8rem}
+@media (max-width:700px){
+ .stage{aspect-ratio:auto;grid-template-columns:1fr;padding:1.2rem;gap:1rem}
+ .paso{font-size:1rem}h2{font-size:1.9rem;margin-bottom:.8rem}.cap{font-size:1.25rem;min-height:5.5rem}.estado{font-size:1rem}
+ .phone{height:330px}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<h1>Protégete online · vídeo de 30 segundos</h1>
+
+<div class="stage" id="stage">
+ <div>
+  <p class="paso" id="paso"></p>
+  <h2 id="tit"></h2>
+  <p class="cap" id="cap" aria-live="polite"></p>
+  <p class="estado" id="est"></p>
+ </div>
+ <svg class="phone" viewBox="0 0 260 470" role="img" aria-label="Dibujo de un móvil que muestra la animación">
+  <defs><clipPath id="clip"><rect x="14" y="62" width="232" height="300"/></clipPath></defs>
+  <rect class="ln" x="10" y="5" width="240" height="450" rx="14" style="stroke-width:3.5"/>
+  <rect class="ln" x="95" y="14" width="70" height="10" rx="3" style="stroke-width:2.5"/>
+  <text class="t" x="130" y="46" font-size="11" text-anchor="middle">9:41 · Tu móvil</text>
+  <line x1="105" y1="438" x2="155" y2="438" stroke="var(--ink-soft)" stroke-width="4" stroke-linecap="round"/>
+  <g id="g1"></g><g id="g2" clip-path="url(#clip)"></g><g id="g3"></g>
+ </svg>
+ <div class="over" id="over"><button class="btn big" id="bigplay">▶ Ver vídeo (30 s)</button></div>
+</div>
+
+<div class="bar">
+ <button class="btn" id="play">Reproducir</button>
+ <button class="btn out" id="reset">Reiniciar</button>
+ <span class="time" id="time">0:00 / 0:30</span>
+ <div class="track" id="track" role="slider" tabindex="0" aria-label="Posición del vídeo" aria-valuemin="0" aria-valuemax="30" aria-valuenow="0">
+  <div class="fill" id="fill"></div><div class="mk" style="left:33.33%"></div><div class="mk" style="left:66.66%"></div>
+ </div>
+</div>
+<div class="chips">
+ <button class="btn out" data-go="0">Paso 1 · Antivirus</button>
+ <button class="btn out" data-go="10">Paso 2 · DNS</button>
+ <button class="btn out" data-go="20">Paso 3 · VPN</button>
+ <button class="btn out" id="subs" aria-pressed="true">Subtítulos</button>
+ <button class="btn out" id="voz" aria-pressed="false">Narración</button>
+</div>
+</div>
+
+<script>
+const D=30, $=s=>document.querySelector(s);
+const clamp=(x,a=0,b=1)=>Math.min(b,Math.max(a,x)), ease=x=>x*x*(3-2*x);
+const NS='http://www.w3.org/2000/svg';
+function E(tag,a={},p){const e=document.createElementNS(NS,tag);for(const k in a)e.setAttribute(k,a[k]);if(p)p.appendChild(e);return e}
+
+const TIT=['Antivirus: la limpieza de la casa','DNS anti-anuncios: leer sin que te griten','VPN: un túnel privado en redes ajenas'];
+const BEATS=[
+ [0,'Un virus es un programa que entra sin permiso y espía tu móvil.'],
+ [4.5,'El antivirus lo busca y lo elimina. Instálalo solo desde la tienda oficial.'],
+ [10,'Muchas webs se llenan de anuncios y botones falsos de «descargar».'],
+ [14.5,'El DNS anti-anuncios tacha sus números: la página se queda limpia.'],
+ [20,'En el wifi de una cafetería, otras personas pueden mirar qué webs visitas.'],
+ [24.5,'La VPN crea un túnel privado. Mejor de pago y con política de no registros.']
+];
+const g1=$('#g1'),g2=$('#g2'),g3=$('#g3'),G=[g1,g2,g3];
+
+/* ---------- Escena 1: bichos + análisis ---------- */
+const bugs=[[75,135],[185,118],[130,205],[70,275],[190,268]].map(([x,y])=>{
+ const g=E('g',{},g1);
+ E('ellipse',{rx:24,ry:21,class:'ln'},g);
+ E('circle',{cx:-7,cy:-3,r:2.6,fill:'var(--ink)'},g);E('circle',{cx:7,cy:1,r:2.6,fill:'var(--ink)'},g);
+ for(let a=-150;a<=-30;a+=30){const r=a*Math.PI/180;E('line',{x1:Math.cos(r)*30,y1:Math.sin(r)*27,x2:Math.cos(r)*39,y2:Math.sin(r)*36,class:'ln',style:'stroke-width:2.5'},g)}
+ return{g,x,y}});
+E('rect',{x:30,y:322,width:200,height:26,rx:5,class:'ln gr',style:'stroke-width:2.5'},g1);
+const scan=E('line',{x1:40,x2:40,y1:335,y2:335,class:'ln gr'},g1);
+E('path',{d:'M213 328l8 7-8 7',class:'ln gr',style:'stroke-width:2.5'},g1);
+const sh1=E('g',{},g1);
+E('path',{d:'M0-36L-32-24v24c0 22 15 35 32 44 17-9 32-22 32-44v-24Z',class:'ln gr',style:'stroke-width:4'},sh1);
+E('path',{d:'M-13 2l10 10 18-22',class:'ln gr',style:'stroke-width:4'},sh1);
+
+/* ---------- Escena 2: página con anuncios ---------- */
+const items=[{k:'t'},{k:'p',f:[1,.9,.6]},{k:'a',s:'¡PREMIO!',a:.3,b:4.5},{k:'p',f:[.95,.8,.7]},{k:'a',s:'DESCARGAR',a:.9,b:5.4},{k:'p',f:[1,.85,.5]}];
+items.forEach(it=>{
+ const g=it.g=E('g',{},g2);
+ if(it.k==='t'){it.h=26;E('rect',{x:35,y:0,width:120,height:11,rx:3,fill:'var(--ink)'},g)}
+ if(it.k==='p'){it.h=50;it.f.forEach((f,i)=>E('rect',{x:35,y:i*14,width:190*f,height:7,rx:3.5,fill:'var(--ink-soft)',opacity:.6},g))}
+ if(it.k==='a'){it.h=56;E('rect',{x:35,y:0,width:190,height:48,rx:4,class:'ln',fill:'var(--card)',style:'stroke-width:2.5'},g);
+  const t=E('text',{x:130,y:30,'text-anchor':'middle','font-size':15,class:'t',style:'fill:var(--ink)'},g);t.textContent=it.s;
+  const x=E('text',{x:216,y:15,'text-anchor':'middle','font-size':11,class:'t'},g);x.textContent='✕'}
+});
+E('rect',{x:55,y:366,width:150,height:24,rx:12,class:'ln',style:'stroke-width:2.5'},g2.parentNode).setAttribute('id','pill');
+const pillBox=$('#pill');pillBox.remove();g3.parentNode.appendChild(pillBox);
+const pillTx=E('text',{x:130,y:382,'text-anchor':'middle','font-size':11,class:'t'},g3.parentNode);
+
+/* ---------- Escena 3: wifi, miradas y túnel ---------- */
+const wifi=E('g',{transform:'translate(130 100)'},g3);
+E('circle',{cx:0,cy:12,r:3,fill:'var(--ink)'},wifi);
+[10,20,30].forEach(r=>E('path',{d:`M${-.707*r} ${12-.707*r}A${r} ${r} 0 0 1 ${.707*r} ${12-.707*r}`,class:'ln',style:'stroke-width:2.5'},wifi));
+const wl=E('text',{x:130,y:134,'text-anchor':'middle','font-size':11,class:'t'},g3);wl.textContent='Wifi de la cafetería';
+const lineA=E('line',{x1:130,y1:146,x2:130,y2:325,class:'ln',style:'stroke-dasharray:2 9;stroke:var(--ink-soft)'},g3);
+const tun=E('g',{},g3);
+const tA=E('line',{x1:116,y1:146,x2:116,y2:325,class:'ln gr',style:'stroke-dasharray:12 9'},tun);
+const tB=E('line',{x1:144,y1:146,x2:144,y2:325,class:'ln gr',style:'stroke-dasharray:12 9'},tun);
+const sh3=E('g',{transform:'translate(130 235)'},g3);
+E('path',{d:'M0-36L-32-24v24c0 22 15 35 32 44 17-9 32-22 32-44v-24Z',fill:'var(--bg)',class:'ln gr',style:'stroke-width:4'},sh3);
+E('circle',{cx:0,cy:-6,r:7,class:'ln gr'},sh3);E('path',{d:'M0 1v16',class:'ln gr'},sh3);
+const ml=E('text',{x:130,y:348,'text-anchor':'middle','font-size':11,class:'t'},g3);ml.textContent='Tu móvil';
+const eyes=[[52,190],[208,185],[50,275],[210,280]].map(([x,y],i)=>{
+ const g=E('g',{},g3);
+ E('line',{x1:x+(x<130?20:-20),y1:y,x2:x<130?112:148,y2:y,class:'ln',style:'stroke-width:2;stroke-dasharray:2 7;stroke:var(--ink-soft)'},g);
+ const f=E('g',{transform:`translate(${x} ${y})`},g);
+ E('circle',{r:17,class:'ln'},f);E('circle',{cx:-6.5,r:5,class:'ln',style:'stroke-width:2.5'},f);E('circle',{cx:6.5,r:5,class:'ln',style:'stroke-width:2.5'},f);E('path',{d:'M-1.5 0h3',class:'ln',style:'stroke-width:2.5'},f);
+ E('path',{d:'M-14-25q14-9 28 0',class:'ln',style:'stroke-width:2.5'},f);
+ return{g,f,x,y}});
+
+/* ---------- Motor de la línea de tiempo ---------- */
+let t=0,playing=false,started=false,last=0,lastBeat=-1,narr=false;
+const T={paso:$('#paso'),tit:$('#tit'),cap:$('#cap'),est:$('#est'),over:$('#over'),play:$('#play'),time:$('#time'),fill:$('#fill'),track:$('#track')};
+
+function render(){
+ const sc=Math.min(2,Math.floor(t/10)),lt=t-sc*10;
+ G.forEach((g,i)=>g.style.display=i===sc?'':'none');
+ pillBox.style.display=pillTx.style.display=sc===1?'':'none';
+ G[sc].setAttribute('opacity',ease(clamp(lt/.4)));
+ let est='';
+ if(sc===0){
+  bugs.forEach((b,i)=>{const p=ease(clamp((lt-(3.6+.8*i))/.4));
+   b.g.setAttribute('transform',`translate(${b.x+Math.sin(lt*3+i*1.7)*3} ${b.y+Math.cos(lt*2.3+i)*2}) scale(${Math.max(.01,1-p)})`);b.g.setAttribute('opacity',1-p)});
+  const n=bugs.filter((_,i)=>lt<3.6+.8*i).length;
+  scan.setAttribute('x2',40+ease(clamp((lt-3)/4.3))*160);
+  const s=ease(clamp((lt-7.5)/.7));sh1.setAttribute('transform',`translate(130 215) scale(${s})`);sh1.setAttribute('opacity',s);
+  est=n?`Estado: el móvil tiene ${n} bicho${n>1?'s':''} dentro.`:'Estado: móvil limpio y protegido.';
+ }
+ if(sc===1){
+  let y=66,vis=0;
+  items.forEach(it=>{let m=1;
+   if(it.k==='a'){m=ease(clamp((lt-it.a)/.4))*(1-ease(clamp((lt-it.b)/.5)));if(m>.5)vis++}
+   it.g.setAttribute('transform',`translate(0 ${y})`);it.g.setAttribute('opacity',it.k==='a'?m:1);y+=it.h*m});
+  const on=lt>=4.5;
+  pillBox.setAttribute('fill',on?'var(--green)':'none');pillBox.style.stroke=on?'var(--green)':'';
+  pillTx.textContent=on?'DNS anti-anuncios: activo':'DNS anti-anuncios: apagado';pillTx.style.fill=on?'var(--on-green)':'';
+  est=vis?'Estado: anuncios visibles por todas partes.':'Estado: página limpia, sin anuncios.';
+ }
+ if(sc===2){
+  const on=lt>=4.5,k=ease(clamp((lt-4.5)/.7));
+  tun.setAttribute('opacity',k);lineA.setAttribute('opacity',1-k);
+  tA.style.strokeDashoffset=tB.style.strokeDashoffset=-lt*30;
+  sh3.setAttribute('transform',`translate(130 235) scale(${k})`);sh3.setAttribute('opacity',k);
+  eyes.forEach((e,i)=>{const o=1-ease(clamp((lt-4.8-i*.25)/.6));e.g.setAttribute('opacity',o);
+   e.f.setAttribute('transform',`translate(${e.x} ${e.y+Math.sin(lt*2+i)*3}) scale(${.6+.4*o})`)});
+  est=on?'Estado: tu conexión va por un túnel privado.':'Estado: en esta red pueden ver qué webs visitas.';
+ }
+ T.paso.textContent='Paso '+(sc+1);T.tit.textContent=TIT[sc];T.est.textContent=est;
+ let b=0;BEATS.forEach((x,i)=>{if(t>=x[0])b=i});
+ T.cap.textContent=BEATS[b][1];
+ if(b!==lastBeat){lastBeat=b;if(playing)speak()}
+ const m=Math.floor(t),pct=t/D*100;
+ T.time.textContent=`0:${String(m).padStart(2,'0')} / 0:30`;
+ T.fill.style.width=pct+'%';T.track.setAttribute('aria-valuenow',m);
+ document.querySelectorAll('[data-go]').forEach(c=>c.setAttribute('aria-pressed',+c.dataset.go===sc*10));
+ const ended=t>=D&&!playing;
+ T.over.hidden=!(!started||ended);
+ $('#bigplay').textContent=ended?'↻ Volver a verlo':'▶ Ver vídeo (30 s)';
+ T.play.textContent=playing?'Pausa':(ended?'Repetir':'Reproducir');
+}
+function speak(){
+ if(!narr||!('speechSynthesis' in window))return;
+ speechSynthesis.cancel();
+ const u=new SpeechSynthesisUtterance(BEATS[Math.max(0,lastBeat)][1]);u.lang='es-ES';u.rate=1.05;speechSynthesis.speak(u);
+}
+function tick(now){
+ if(!playing)return;
+ t=Math.min(D,t+(now-last)/1000);last=now;
+ if(t>=D)playing=false;
+ render();
+ if(playing)requestAnimationFrame(tick);
+}
+function play(){
+ if(t>=D)t=0;
+ started=playing=true;last=performance.now();lastBeat=-1;
+ render();speak();requestAnimationFrame(tick);
+}
+function pause(){playing=false;if('speechSynthesis' in window)speechSynthesis.cancel();render()}
+function seek(s){t=clamp(s,0,D);lastBeat=-1;render();if(playing)speak()}
+
+T.play.onclick=()=>playing?pause():play();
+$('#bigplay').onclick=play;
+$('#reset').onclick=()=>{t=0;if('speechSynthesis' in window)speechSynthesis.cancel();play()};
+document.querySelectorAll('[data-go]').forEach(c=>c.onclick=()=>{started=true;seek(+c.dataset.go);if(!playing)play()});
+T.track.addEventListener('pointerdown',e=>{const r=T.track.getBoundingClientRect();started=true;seek((e.clientX-r.left)/r.width*D)});
+T.track.addEventListener('keydown',e=>{if(e.key==='ArrowRight')seek(t+2);if(e.key==='ArrowLeft')seek(t-2)});
+$('#subs').onclick=e=>{const on=e.target.getAttribute('aria-pressed')!=='true';e.target.setAttribute('aria-pressed',on);T.cap.classList.toggle('off',!on)};
+$('#voz').onclick=e=>{narr=e.target.getAttribute('aria-pressed')!=='true';e.target.setAttribute('aria-pressed',narr);if(narr)speak();else if('speechSynthesis' in window)speechSynthesis.cancel()};
+document.addEventListener('keydown',e=>{if(e.code==='Space'&&!/BUTTON|INPUT/.test(e.target.tagName)&&e.target!==T.track){e.preventDefault();playing?pause():play()}});
+render();
+</script>
+</body>
+</html>

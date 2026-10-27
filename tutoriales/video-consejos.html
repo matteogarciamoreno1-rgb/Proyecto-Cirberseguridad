@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Protégete online – Consejos (vídeo interactivo)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@500;700;800&family=Newsreader:ital,opsz,wght@0,6..72,400;1,6..72,400&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f3eee5;--card:#e6e3da;--ink:#1f2933;--ink-soft:#4a5560;--green:#2d5b45;--on-green:#f3eee5;--alert:#a63d2f;--grid:rgba(31,41,51,.06);
+--fd:"Schibsted Grotesk","Helvetica Neue",Arial,sans-serif;--fb:"Newsreader",Georgia,serif;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#161d22;--card:#1f282e;--ink:#f3eee5;--ink-soft:#b9c0c6;--green:#6fb28f;--on-green:#12201a;--alert:#ef8a76;--grid:rgba(243,238,229,.06)}}
+:root[data-theme="dark"]{--bg:#161d22;--card:#1f282e;--ink:#f3eee5;--ink-soft:#b9c0c6;--green:#6fb28f;--on-green:#12201a;--alert:#ef8a76;--grid:rgba(243,238,229,.06)}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg) linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);background-size:72px 72px;color:var(--ink);font-family:var(--fb);font-size:1.15rem;min-height:100vh}
+.wrap{max-width:1100px;margin:0 auto;padding:1.2rem}
+h1{font:800 1.4rem var(--fd);letter-spacing:-.02em;margin:0 0 .8rem}
+.stage{position:relative;container-type:inline-size;aspect-ratio:16/9;background:var(--bg);border:2px solid var(--ink);border-radius:4px;display:grid;grid-template-columns:1fr 1.2fr;align-items:center;gap:2.5cqw;padding:3cqw 4cqw;overflow:hidden}
+.paso{font:700 2cqw var(--fd);color:var(--ink-soft);margin:0 0 .5cqw}
+h2{font:800 3.6cqw/1.07 var(--fd);letter-spacing:-.03em;margin:0 0 1.5cqw}
+.cap{font-size:2.3cqw;line-height:1.3;margin:0 0 1.4cqw;min-height:9cqw}
+.cap.off{visibility:hidden}
+.estado{font:700 1.7cqw/1.3 var(--fd);margin:0;min-height:4.4cqw}
+.aviso{border:2px solid var(--ink);border-radius:4px;background:var(--card);padding:1cqw 1.4cqw;min-height:8.4cqw;opacity:0;transition:opacity .3s}
+.aviso b{display:block;font:700 1.7cqw var(--fd);color:var(--alert);margin-bottom:.2cqw}
+.aviso span{font-size:1.75cqw;line-height:1.3}
+.mon{width:100%;height:auto;max-height:50cqw;justify-self:center}
+.ln{fill:none;stroke:var(--ink);stroke-width:3;stroke-linecap:round;stroke-linejoin:round}
+.gr{stroke:var(--green)}.al{stroke:var(--alert)}
+.t{font-family:var(--fd);font-weight:700;fill:var(--ink-soft)}
+.over{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:color-mix(in srgb,var(--bg) 78%,transparent)}
+.over[hidden]{display:none}
+.btn{font:700 1.05rem var(--fd);background:var(--green);color:var(--on-green);border:2px solid var(--green);border-radius:4px;padding:.8rem 1.3rem;cursor:pointer}
+.btn.out{background:transparent;color:var(--ink);border-color:var(--ink)}
+.btn.out[aria-pressed="true"]{background:var(--ink);color:var(--bg)}
+.btn:hover{filter:brightness(1.12)}
+.btn.big{font-size:1.5rem;padding:1.1rem 2rem}
+.btn:focus-visible,.track:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
+.bar{display:flex;flex-wrap:wrap;gap:.6rem;align-items:center;margin-top:1rem}
+.time{font:700 1rem var(--fd);color:var(--ink-soft);min-width:5.5ch}
+.track{position:relative;flex:1 1 220px;height:18px;border:2px solid var(--ink);border-radius:4px;cursor:pointer;background:var(--bg)}
+.fill{position:absolute;inset:0 auto 0 0;width:0;background:var(--green)}
+.mk{position:absolute;top:-2px;bottom:-2px;width:2px;background:var(--ink)}
+.chips{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:.8rem}
+@media (max-width:700px){
+ .stage{aspect-ratio:auto;grid-template-columns:1fr;padding:1.2rem;gap:1rem}
+ .paso{font-size:1rem}h2{font-size:1.7rem;margin-bottom:.8rem}.cap{font-size:1.2rem;min-height:5.5rem}.estado{font-size:1rem;min-height:2.6rem}
+ .aviso{min-height:0;padding:.6rem .8rem}.aviso b{font-size:1rem}.aviso span{font-size:1rem}.mon{max-height:none}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<h1>Protégete online · 03 Consejos que evitan casi todo · 30 segundos</h1>
+
+<div class="stage">
+ <div>
+  <p class="paso" id="paso"></p>
+  <h2 id="tit"></h2>
+  <p class="cap" id="cap" aria-live="polite"></p>
+  <p class="estado" id="est"></p>
+  <div class="aviso" id="aviso"><b>⚠ Ojo</b><span id="avx"></span></div>
+ </div>
+ <svg class="mon" viewBox="0 0 400 310" role="img" aria-label="Dibujo que muestra la animación del consejo">
+  <rect class="ln" x="8" y="8" width="384" height="294" rx="4"/>
+  <g id="g1"></g><g id="g2"></g><g id="g3"></g><g id="g4"></g>
+ </svg>
+ <div class="over" id="over"><button class="btn big" id="bigplay">▶ Ver vídeo (30 s)</button></div>
+</div>
+
+<div class="bar">
+ <button class="btn" id="play">Reproducir</button>
+ <button class="btn out" id="reset">Reiniciar</button>
+ <span class="time" id="time">0:00 / 0:30</span>
+ <div class="track" id="track" role="slider" tabindex="0" aria-label="Posición del vídeo" aria-valuemin="0" aria-valuemax="30" aria-valuenow="0">
+  <div class="fill" id="fill"></div>
+  <div class="mk" style="left:25%"></div><div class="mk" style="left:50%"></div><div class="mk" style="left:75%"></div>
+ </div>
+</div>
+<div class="chips">
+ <button class="btn out" data-go="0">Consejo 1 · Archivos</button>
+ <button class="btn out" data-go="7.5">Consejo 2 · Fuentes</button>
+ <button class="btn out" data-go="15">Consejo 3 · Web sospechosa</button>
+ <button class="btn out" data-go="22.5">Consejo 4 · Llamadas</button>
+ <button class="btn out" id="subs" aria-pressed="true">Subtítulos</button>
+ <button class="btn out" id="voz" aria-pressed="false">Narración</button>
+</div>
+</div>
+
+<script>
+const D=30,SC=7.5,$=s=>document.querySelector(s);
+const clamp=(x,a=0,b=1)=>Math.min(b,Math.max(a,x)),ease=x=>x*x*(3-2*x);
+const NS='http://www.w3.org/2000/svg';
+function E(tag,a={},p){const e=document.createElementNS(NS,tag);for(const k in a)e.setAttribute(k,a[k]);if(p)p.appendChild(e);return e}
+function TX(p,x,y,s,size,o={}){const e=E('text',Object.assign({x,y,'font-size':size,class:'t'},o),p);e.textContent=s;return e}
+
+const TIT=['Verifica los archivos antes de abrirlos','Verifica las fuentes antes de fiarte','Si tienes que entrar en una web sospechosa','Llamadas que piden dinero o datos: cuelga'];
+const AV=[5.8,4.5,5.2,5.0];
+const AVX=['«factura.pdf.exe» no es una factura: es un programa. Y ningún análisis es una garantía absoluta.','El candado solo significa conexión cifrada. Una web falsa también puede tenerlo.','Si el navegador avisa de que el sitio es peligroso, hazle caso y sal.','Tu banco nunca te pedirá códigos ni claves completas, ni que muevas dinero a una «cuenta segura».'];
+const BEATS=[
+ [0,'Antes de abrir un archivo raro, súbelo a VirusTotal: lo revisan decenas de antivirus.'],
+ [4.2,'Muchas detecciones: no lo abras, bórralo y avisa a quien te lo envió.'],
+ [7.5,'Antes de fiarte, comprueba quién está detrás y si la dirección es exacta.'],
+ [11,'Los estafadores cambian una letra por un número. Escribe tú la dirección.'],
+ [15,'Si tienes que entrar en una web sospechosa, piensa en un escaparate.'],
+ [18.2,'Puedes mirar desde la calle, pero no entras ni dejas tu cartera en el mostrador.'],
+ [22.5,'Si te llaman pidiendo dinero, claves o que instales algo, desconfía.'],
+ [25.1,'Cuelga, respira y llama tú al número oficial. La prisa es la herramienta del estafador.']
+];
+const g1=$('#g1'),g2=$('#g2'),g3=$('#g3'),g4=$('#g4'),G=[g1,g2,g3,g4];
+
+/* ---- Escena 1: VirusTotal ---- */
+function chip(g,x,y,name,sub){const c=E('g',{},g);
+ E('rect',{x:0,y:0,width:170,height:36,rx:4,fill:'var(--bg)',class:'ln',style:'stroke-width:2.5'},c);
+ E('path',{d:'M12 8h9l6 6v14H12zM21 8v6h6',class:'ln',style:'stroke-width:2'},c);
+ TX(c,36,16,name,12,{style:'fill:var(--ink)'});TX(c,36,29,sub,9,{style:'font-weight:500'});
+ c.setAttribute('transform',`translate(${x} ${y})`);return c}
+const zone=E('rect',{x:30,y:96,width:340,height:170,rx:6,class:'ln',style:'stroke-width:2;stroke-dasharray:7 5;stroke:var(--ink-soft)'},g1);
+TX(g1,200,116,'Zona de análisis de VirusTotal (simulación)',11,{'text-anchor':'middle',style:'fill:var(--ink)'});
+const chA=chip(g1,24,34,'fotos-vacaciones.zip','de tu cuñado'),chB=chip(g1,206,34,'factura.pdf.exe','de un correo raro');
+const cells=[];for(let i=0;i<28;i++){const col=i%14,row=Math.floor(i/14);
+ cells.push({r:E('rect',{x:50+col*22,y:186+row*22,width:14,height:14,rx:2,class:'ln',style:'stroke-width:1.8;stroke:var(--ink-soft)'},g1),det:i%5!==2,f:2.5+i*.1})}
+const cnt=TX(g1,200,250,'',15,{'text-anchor':'middle',style:'fill:var(--ink)'});
+
+/* ---- Escena 2: direcciones ---- */
+TX(g2,200,36,'¿Cuál es la dirección real de un banco imaginario?',13,{'text-anchor':'middle',style:'fill:var(--ink)'});
+const c2=[['www.banc','0','-ejemplo.es','Opción A'],['www.banco-ejemplo.es','','','Opción B']].map((c,i)=>{
+ const g=E('g',{transform:`translate(40 ${52+i*72})`},g2);
+ const r=E('rect',{x:0,y:0,width:320,height:60,rx:4,fill:'var(--bg)',class:'ln',style:'stroke-width:2.5'},g);
+ const tx=E('text',{x:44,y:28,'font-size':18,class:'t',style:'fill:var(--ink)'},g);
+ [c[0],c[1],c[2]].forEach((s,k)=>{E('tspan',{},tx).textContent=s});
+ const z=tx.children[1];
+ TX(g,44,47,c[3]+' · pulsa si crees que es la real',9,{style:'font-weight:500'});
+ const lk=E('g',{transform:'translate(20 24)'},g);
+ E('rect',{x:-8,y:-2,width:16,height:12,rx:2,class:'ln',style:'stroke-width:2.2'},lk);E('path',{d:'M-5-2v-4a5 5 0 0 1 10 0v4',class:'ln',style:'stroke-width:2.2'},lk);
+ const mk=TX(g,312,52,'',12,{'text-anchor':'end'});
+ return{g,r,z,lk,mk}});
+const lab2=TX(g2,200,214,'',12,{'text-anchor':'middle',style:'fill:var(--ink)'});
+const bar2=E('g',{},g2);
+E('rect',{x:40,y:228,width:320,height:36,rx:18,class:'ln',style:'stroke-width:2.5'},bar2);
+const typ=TX(bar2,60,251,'',15,{style:'fill:var(--ink)'});
+
+/* ---- Escena 3: web sospechosa ---- */
+E('rect',{x:26,y:48,width:134,height:22,class:'ln',fill:'var(--card)',style:'stroke-width:2.5'},g3);
+[48,70,92,114,136].forEach(x=>E('line',{x1:x,y1:48,x2:x,y2:70,class:'ln',style:'stroke-width:2'},g3));
+E('rect',{x:34,y:74,width:118,height:100,class:'ln',style:'stroke-width:2.5'},g3);
+E('circle',{cx:68,cy:140,r:14,class:'ln gr',style:'stroke-width:2.5'},g3);E('rect',{x:94,y:118,width:40,height:44,rx:3,class:'ln',style:'stroke-width:2.5'},g3);
+E('line',{x1:20,y1:190,x2:170,y2:190,class:'ln',style:'stroke-width:2'},g3);
+const pers=E('g',{},g3);
+E('circle',{cx:62,cy:222,r:9,class:'ln'},pers);E('path',{d:'M62 231v22M62 253l-9 14M62 253l9 14M62 238l-10 8M62 238l10 8',class:'ln'},pers);
+E('line',{x1:68,y1:214,x2:92,y2:182,class:'ln',style:'stroke-width:2;stroke-dasharray:2 6;stroke:var(--ink-soft)'},g3);
+E('rect',{x:96,y:244,width:30,height:20,rx:3,class:'ln gr',style:'stroke-width:2.5'},g3);E('path',{d:'M104 254l5 5 9-10',class:'ln gr',style:'stroke-width:2.5'},g3);
+TX(g3,111,280,'tu cartera',10,{'text-anchor':'middle'});
+const R3=[['VPN y Brave o Tor','activa la VPN antes de entrar','ok',.4],['Cero datos personales','ni contraseñas, tarjeta o DNI','no',1.9],['No descargues nada','aunque te lo pidan «para ver»','no',3.4],['Aviso de peligro: sal','ese aviso no salta por gusto','warn',4.9]].map((r,i)=>{
+ const g=E('g',{},g3),cl=r[2]==='ok'?'gr':'al';
+ E('rect',{x:0,y:0,width:208,height:54,rx:4,fill:'var(--card)',class:'ln',style:'stroke-width:2.5'},g);
+ const ic=E('g',{transform:'translate(26 27)'},g);
+ if(r[2]==='warn'){E('path',{d:'M0-13l13 23h-26ZM0-4v7M0 6.500v.5',class:'ln '+cl,style:'stroke-width:2.5'},ic)}
+ else{E('circle',{r:12,class:'ln '+cl,style:'stroke-width:2.5'},ic);E('path',{d:r[2]==='ok'?'M-6 0l4 5 8-10':'M-5-5l10 10M5-5l-10 10',class:'ln '+cl,style:'stroke-width:2.5'},ic)}
+ TX(g,50,24,r[0],12.5,{style:'fill:var(--ink)'});TX(g,50,40,r[1],10,{style:'font-weight:500'});
+ return{g,y:30+i*66,s:r[3]}});
+
+/* ---- Escena 4: llamadas ---- */
+const ph=E('g',{},g4);
+E('rect',{x:34,y:44,width:82,height:150,rx:10,class:'ln'},ph);E('line',{x1:58,y1:54,x2:92,y2:54,class:'ln',style:'stroke-width:2.5'},ph);
+const phT=TX(ph,75,106,'Tu banco',13,{'text-anchor':'middle',style:'fill:var(--ink)'});
+const phS=TX(ph,75,124,'(el número se',9,{'text-anchor':'middle',style:'font-weight:500'});
+const phS2=TX(ph,75,136,'puede falsificar)',9,{'text-anchor':'middle',style:'font-weight:500'});
+const bub=E('g',{},g4);
+E('path',{d:'M136 40h228a8 8 0 0 1 8 8v54a8 8 0 0 1-8 8H150l-14 12v-12Z',fill:'var(--card)',class:'ln',style:'stroke-width:2.5'},bub);
+['«Soy de su banco. Dígame el','código que le va a llegar','por SMS, es urgente.»'].forEach((s,i)=>TX(bub,152,64+i*18,s,13,{style:'fill:var(--ink);font-style:italic'}));
+const S4=[['Cuelga','Sin discusión ni vergüenza'],['Respira','La prisa es su herramienta'],['Llama tú','Al número oficial de tu tarjeta']].map((s,i)=>{
+ const g=E('g',{},g4);
+ E('rect',{x:0,y:0,width:236,height:50,rx:4,fill:'var(--card)',class:'ln',style:'stroke-width:2.5'},g);
+ E('circle',{cx:26,cy:25,r:13,class:'ln gr',style:'stroke-width:2.5'},g);TX(g,26,31,String(i+1),16,{'text-anchor':'middle',style:'fill:var(--green)'});
+ TX(g,52,22,s[0],14,{style:'fill:var(--ink)'});TX(g,52,39,s[1],10.5,{style:'font-weight:500'});
+ return{g,y:34+i*58,s:2.8+i*.8}});
+const lab4=TX(g4,200,222,'Cuatro obras de teatro, un mismo fin: prisa, dinero o datos',10.5,{'text-anchor':'middle'});
+const CH=['Falso banco','Falso técnico','Falso familiar','Falso premio'].map((n,i)=>{
+ const g=E('g',{transform:`translate(${22+i*88} 232)`},g4);
+ const r=E('rect',{x:0,y:0,width:84,height:30,rx:4,fill:'var(--bg)',class:'ln',style:'stroke-width:2.2'},g);
+ const t=TX(g,42,19,n,10.5,{'text-anchor':'middle',style:'fill:var(--ink)'});
+ return{g,r,t,s:5.4+i*.45}});
+
+/* ---- Motor ---- */
+let t=0,playing=false,started=false,last=0,lastBeat=-1,narr=false;
+const T={paso:$('#paso'),tit:$('#tit'),cap:$('#cap'),est:$('#est'),over:$('#over'),play:$('#play'),time:$('#time'),fill:$('#fill'),track:$('#track')};
+
+function render(){
+ const sc=Math.min(3,Math.floor(t/SC)),lt=t-sc*SC;
+ G.forEach((g,i)=>g.style.display=i===sc?'':'none');
+ G[sc].setAttribute('opacity',ease(clamp(lt/.4)));
+ let est='';
+ if(sc===0){
+  const m=ease(clamp((lt-.8)/1));
+  chB.setAttribute('transform',`translate(${206-91*m} ${34+92*m})`);chA.setAttribute('opacity',1-.65*m);
+  let n=0;cells.forEach(c=>{const on=lt>=c.f;if(on&&c.det)n++;
+   c.r.setAttribute('opacity',ease(clamp((lt-2.2)/.3)));
+   c.r.style.fill=on&&c.det?'var(--alert)':'';c.r.style.stroke=on&&c.det?'var(--alert)':'var(--ink-soft)'});
+  const done=lt>=5.8;
+  cnt.textContent=lt<2.3?'Esperando un archivo…':(done?'⚠ ¡No lo abras! Bórralo y avisa.':`Detecciones: ${n}`);
+  cnt.style.fill=done?'var(--alert)':'var(--ink)';
+  est=lt<2.3?'Estado: esperando un archivo…':(done?'Estado: casi seguro que es dañino.':'Estado: analizando con decenas de antivirus…');
+ }
+ if(sc===1){
+  const p=ease(clamp((lt-3.3)/.4)),lk=ease(clamp((lt-4.5)/.4));
+  c2.forEach((c,i)=>{c.g.setAttribute('opacity',ease(clamp((lt-.3-i*.4)/.4)));
+   c.lk.setAttribute('opacity',lk);
+   if(p>0){const bad=i===0,col=bad?'var(--alert)':'var(--green)';c.r.style.stroke=col;c.mk.style.fill=col;c.mk.textContent=bad?'✕ Falsa':'✓ Real';c.mk.setAttribute('opacity',p);if(bad)c.z.style.fill='var(--alert)'}
+   else{c.r.style.stroke='';c.mk.textContent='';c.z.style.fill=''}});
+  lab2.textContent=lt<4.5?'':(lt<5.8?'Los dos tienen candado…':'Escribe tú la dirección:');
+  bar2.setAttribute('opacity',ease(clamp((lt-5.6)/.4)));
+  const s='www.banco-ejemplo.es',n=Math.floor(clamp((lt-5.9)/1.3)*s.length);
+  typ.textContent=s.slice(0,n)+(Math.floor(lt*2)%2===0?'|':'');
+  est=lt<3.3?'Estado: ¿cuál es la dirección real?':(lt<5.8?'Estado: la A cambia una «o» por un cero.':'Estado: el candado no basta; escribe tú la dirección.');
+ }
+ if(sc===2){
+  let k=0;R3.forEach((r,i)=>{const p=ease(clamp((lt-r.s)/.5));if(p>0)k=i+1;
+   r.g.setAttribute('transform',`translate(176 ${r.y+(1-p)*14})`);r.g.setAttribute('opacity',p)});
+  pers.setAttribute('transform',`translate(${Math.sin(lt*2)*2} 0)`);
+  est=`Mirar sí, entrar no: regla ${Math.max(1,k)} de 4.`;
+ }
+ if(sc===3){
+  const ring=lt<2.6;
+  ph.setAttribute('transform',ring?`rotate(${Math.sin(lt*28)*2.5} 75 119)`:'');
+  phT.textContent=ring?'Tu banco':'Colgado ✓';phT.style.fill=ring?'var(--ink)':'var(--green)';
+  phS.style.display=phS2.style.display=ring?'':'none';
+  bub.setAttribute('opacity',ease(clamp((lt-.2)/.4))*(1-ease(clamp((lt-2.4)/.4))));
+  S4.forEach(s=>{const p=ease(clamp((lt-s.s)/.5));s.g.setAttribute('transform',`translate(136 ${s.y+(1-p)*14})`);s.g.setAttribute('opacity',p)});
+  lab4.setAttribute('opacity',ease(clamp((lt-5)/.4)));
+  CH.forEach((c,i)=>{const p=ease(clamp((lt-c.s)/.4));c.g.setAttribute('opacity',p);
+   const hot=lt>=c.s&&lt<c.s+.45;c.r.style.stroke=hot?'var(--alert)':'';c.t.style.fill=hot?'var(--alert)':''});
+  est=lt<2.6?'Estado: te llaman pidiendo un código.':(lt<5?'Estado: cuelga → respira → llama tú.':'Estado: banco, técnico, familiar o premio: mismo guion.');
+ }
+ T.paso.textContent='03 · Consejo '+(sc+1);T.tit.textContent=TIT[sc];T.est.textContent=est;
+ $('#avx').textContent=AVX[sc];$('#aviso').style.opacity=lt>=AV[sc]?1:0;
+ let b=0;BEATS.forEach((x,i)=>{if(t>=x[0])b=i});
+ T.cap.textContent=BEATS[b][1];
+ if(b!==lastBeat){lastBeat=b;if(playing)speak()}
+ T.time.textContent=`0:${String(Math.floor(t)).padStart(2,'0')} / 0:30`;
+ T.fill.style.width=(t/D*100)+'%';T.track.setAttribute('aria-valuenow',Math.floor(t));
+ document.querySelectorAll('[data-go]').forEach(c=>c.setAttribute('aria-pressed',+c.dataset.go===sc*SC));
+ const ended=t>=D&&!playing;
+ T.over.hidden=!(!started||ended);
+ $('#bigplay').textContent=ended?'↻ Volver a verlo':'▶ Ver vídeo (30 s)';
+ T.play.textContent=playing?'Pausa':(ended?'Repetir':'Reproducir');
+}
+function speak(){
+ if(!narr||!('speechSynthesis' in window))return;
+ speechSynthesis.cancel();
+ const u=new SpeechSynthesisUtterance(BEATS[Math.max(0,lastBeat)][1]);u.lang='es-ES';u.rate=1.05;speechSynthesis.speak(u);
+}
+function tick(now){
+ if(!playing)return;
+ t=Math.min(D,t+(now-last)/1000);last=now;
+ if(t>=D)playing=false;
+ render();
+ if(playing)requestAnimationFrame(tick);
+}
+function play(){if(t>=D)t=0;started=playing=true;last=performance.now();lastBeat=-1;render();speak();requestAnimationFrame(tick)}
+function pause(){playing=false;if('speechSynthesis' in window)speechSynthesis.cancel();render()}
+function seek(s){t=clamp(s,0,D);lastBeat=-1;render();if(playing)speak()}
+
+T.play.onclick=()=>playing?pause():play();
+$('#bigplay').onclick=play;
+$('#reset').onclick=()=>{t=0;if('speechSynthesis' in window)speechSynthesis.cancel();play()};
+document.querySelectorAll('[data-go]').forEach(c=>c.onclick=()=>{started=true;seek(+c.dataset.go);if(!playing)play()});
+T.track.addEventListener('pointerdown',e=>{const r=T.track.getBoundingClientRect();started=true;seek((e.clientX-r.left)/r.width*D)});
+T.track.addEventListener('keydown',e=>{if(e.key==='ArrowRight')seek(t+2);if(e.key==='ArrowLeft')seek(t-2)});
+$('#subs').onclick=e=>{const on=e.target.getAttribute('aria-pressed')!=='true';e.target.setAttribute('aria-pressed',on);T.cap.classList.toggle('off',!on)};
+$('#voz').onclick=e=>{narr=e.target.getAttribute('aria-pressed')!=='true';e.target.setAttribute('aria-pressed',narr);if(narr)speak();else if('speechSynthesis' in window)speechSynthesis.cancel()};
+document.addEventListener('keydown',e=>{if(e.code==='Space'&&!/BUTTON|INPUT/.test(e.target.tagName)&&e.target!==T.track){e.preventDefault();playing?pause():play()}});
+render();
+</script>
+</body>
+</html>
